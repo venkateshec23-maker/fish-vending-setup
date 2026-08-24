@@ -30,20 +30,19 @@ fish_vending_machine/
 ├── esp32-code/                 # Arduino IDE sketch (.ino)
 ├── esp32-firmware/             # PlatformIO firmware
 ├── esp32-setup/                # ESP32 upload helpers
-├── setup.sh                    # One-click setup script
-├── run.sh                      # Start both servers
-├── .env.example                # Environment template
-└── README.md                   # This file
+├── setup.sh                    # Linux/macOS setup script
+├── README.md                   # This file
+└── .env.example                # Environment template
 ```
 
-## 🚀 Quick Start (Recommended)
+## 🚀 Quick Start
 
-For student laptops, use the **one-click setup script**:
+### Linux / macOS
 
 ```bash
-# 1. Clone the repository (or copy from disk)
-git clone https://github.com/YOUR_USERNAME/fish_vending_machine.git
-cd fish_vending_machine
+# 1. Clone the repository
+git clone https://github.com/Abhilash1575/fish-vending-setup.git
+cd fish-vending-setup
 
 # 2. Run setup (installs everything)
 ./setup.sh
@@ -55,6 +54,42 @@ nano .env
 ./run.sh
 ```
 
+### Windows (PowerShell or CMD in VS Code)
+
+```powershell
+# 1. Clone the repository
+git clone https://github.com/Abhilash1575/fish-vending-setup.git
+cd fish-vending-setup
+
+# 2. Create Python virtual environment
+python -m venv backend\venv
+
+# 3. Activate virtual environment
+.\backend\venv\Scripts\activate
+
+# 4. Install Python dependencies
+pip install -r backend\requirements.txt
+
+# 5. Create .env file
+Copy-Item .env.example .env
+
+# 6. Initialize database
+python database\init_db.py
+
+# 7. Install frontend dependencies
+cd frontend
+npm install
+cd ..
+
+# 8. Start backend (Terminal 1)
+.\backend\venv\Scripts\activate
+python backend\app.py
+
+# 9. Start frontend (Terminal 2)
+cd frontend
+npm run dev -- --host
+```
+
 Then open:
 - **Customer UI**: `http://localhost:3000`
 - **Admin panel**: Navigate to Admin section from the navbar
@@ -62,9 +97,12 @@ Then open:
 
 ## 📋 System Requirements
 
-- **OS**: Ubuntu 20.04+ / Debian 11+ (or compatible Linux)
+- **OS**: Windows 10+, Ubuntu 20.04+, Debian 11+, or macOS
 - **RAM**: 2 GB minimum, 4 GB recommended
 - **Disk**: 1 GB free space
+- **Python**: 3.8+ (Windows: download from python.org)
+- **Node.js**: 16+ (Windows: download from nodejs.org)
+- **Git**: Required for cloning (Windows: download from git-scm.com)
 - **Network**: Same local network as ESP32 device
 
 ## 🐧 Linux Quick Reference
@@ -129,6 +167,64 @@ sudo ufw allow 80/tcp   # For ESP32 web server
 sudo ufw status
 ```
 
+## 🪟 Windows Quick Reference (PowerShell / CMD)
+
+### Find Your Machine's IP Address
+
+```powershell
+# Method 1: ipconfig (simplest)
+ipconfig
+
+# Method 2: Get-NetIPAddress (PowerShell only)
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object -ExpandProperty IPAddress
+```
+
+### Check if Ports Are In Use
+
+```powershell
+# Check if backend (5050) or frontend (3000) are already running
+netstat -ano | findstr :5050
+netstat -ano | findstr :3000
+
+# Kill a process on a specific port (replace PID with actual process ID)
+taskkill /F /PID <PID>
+```
+
+### Test Network Connectivity
+
+```powershell
+# Ping the ESP32 (replace with actual IP)
+ping 192.168.1.100
+
+# Test backend API
+curl http://localhost:5050/api/fish
+
+# Test ESP32 dispense endpoint
+curl -X POST http://<ESP32_IP>/dispense -H "Content-Type: application/json" -d "{\"orderId\":\"TEST\",\"fishType\":\"Tilapia\",\"qty\":1}"
+```
+
+### View Logs
+
+```powershell
+# If using run.ps1 (logs are saved to files)
+Get-Content backend.log -Wait
+Get-Content frontend.log -Wait
+
+# If running manually in separate terminals, logs appear in the terminal
+```
+
+### Firewall Rules
+
+```powershell
+# Allow ports through Windows Firewall
+New-NetFirewallRule -DisplayName "Fish Vending Backend" -Direction Inbound -Protocol TCP -LocalPort 5050 -Action Allow
+New-NetFirewallRule -DisplayName "Fish Vending Frontend" -Direction Inbound -Protocol TCP -LocalPort 3000 -Action Allow
+New-NetFirewallRule -DisplayName "ESP32 Web Server" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow
+
+# Check firewall rules
+Get-NetFirewallRule | Where-Object {$_.DisplayName -like "*Fish Vending*"}
+```
+
 ## 🛠️ Manual Installation
 
 ### Prerequisites
@@ -137,7 +233,7 @@ sudo ufw status
 - Node.js 16+
 - npm or yarn
 
-### Backend Setup
+### Backend Setup (Linux/macOS)
 
 1. Navigate to the backend directory:
 ```bash
@@ -147,7 +243,7 @@ cd backend
 2. Create a virtual environment:
 ```bash
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -189,11 +285,49 @@ python app.py
 
 The backend will run on `http://localhost:5050`
 
+### Backend Setup (Windows PowerShell)
+
+1. Navigate to the backend directory:
+```powershell
+cd backend
+```
+
+2. Create a virtual environment:
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+3. Install dependencies:
+```powershell
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file:
+```powershell
+Copy-Item ..\.env.example ..\.env
+```
+
+5. Open `.env` in a text editor and update `FLASK_SERVER_IP` to your machine's IP address (find it with `ipconfig`).
+
+6. Initialize the database:
+```powershell
+python database\init_db.py
+```
+
+7. Run the Flask server:
+```powershell
+python app.py
+```
+
+The backend will run on `http://localhost:5050`
+
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
 ```bash
 cd frontend
+# Windows: cd frontend
 ```
 
 2. Install dependencies:
@@ -268,7 +402,7 @@ Expected response:
 
 See `esp32-setup/upload-instructions.md` for detailed steps.
 
-**Quick Arduino CLI commands:**
+**Quick Arduino CLI commands (Linux/macOS):**
 ```bash
 # Compile
 arduino-cli compile --fqbn esp32:esp32:esp32dev esp32-code/esp32_fish_vending/
@@ -278,6 +412,19 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32dev esp32-code/esp32_
 
 # PlatformIO
 cd esp32-firmware && pio run --target upload
+```
+
+**Windows (Arduino CLI):**
+```powershell
+# Compile
+arduino-cli compile --fqbn esp32:esp32:esp32dev esp32-code\esp32_fish_vending\
+
+# Upload (check COM port in Device Manager)
+arduino-cli upload -p COM3 --fqbn esp32:esp32:esp32dev esp32-code\esp32_fish_vending\
+
+# PlatformIO
+cd esp32-firmware
+pio run --target upload
 ```
 
 ## 📊 Database Schema
@@ -317,6 +464,8 @@ cd esp32-firmware && pio run --target upload
 ## 🐛 Troubleshooting
 
 ### Backend Won't Start
+
+**Linux/macOS:**
 ```bash
 # Check if port 5050 is already in use
 sudo ss -tlnp | grep 5050
@@ -329,7 +478,22 @@ python app.py
 ls -la backend/instance/
 ```
 
+**Windows (PowerShell):**
+```powershell
+# Check if port 5050 is already in use
+netstat -ano | findstr :5050
+
+# Verify Python virtual environment
+.\backend\venv\Scripts\activate
+python backend\app.py
+
+# Check database file exists
+Test-Path backend\fish_vending.db
+```
+
 ### Frontend Won't Start
+
+**Linux/macOS:**
 ```bash
 # Check if port 3000 is in use
 sudo ss -tlnp | grep 3000
@@ -341,7 +505,23 @@ cd frontend && rm -rf node_modules package-lock.json && npm install
 cd frontend && rm -rf node_modules/.vite
 ```
 
+**Windows (PowerShell):**
+```powershell
+# Check if port 3000 is in use
+netstat -ano | findstr :3000
+
+# Reinstall node modules
+cd frontend
+Remove-Item -Recurse -Force node_modules, package-lock.json
+npm install
+
+# Clear Vite cache
+Remove-Item -Recurse -Force node_modules\.vite
+```
+
 ### ESP32 Not Connecting
+
+**All platforms:**
 ```bash
 # Verify ESP32 is on the same network
 ping <ESP32_IP>
@@ -351,12 +531,20 @@ curl http://<FLASK_SERVER_IP>:5050/api/fish
 
 # Verify ESP32 web server responds
 curl http://<ESP32_IP>/status
+```
 
-# Check firewall allows port 80 (ESP32) and 5050 (Flask)
-sudo ufw status
+**Windows:**
+```powershell
+# Check firewall allows port 5050 and 3000
+Get-NetFirewallRule | Where-Object {$_.DisplayName -like "*Fish Vending*"}
+
+# Test backend from Windows machine
+curl http://localhost:5050/api/fish
 ```
 
 ### Database Issues
+
+**Linux/macOS:**
 ```bash
 # Reset database (WARNING: deletes all data)
 cd backend
@@ -367,24 +555,37 @@ python database/init_db.py reset
 python database/init_db.py
 ```
 
-### MQTT / Adafruit IO Issues
-```bash
-# MQTT is optional - app runs without it. To enable:
-# 1. Create account at https://io.adafruit.com
-# 2. Get username and AIO key
-# 3. Update .env with credentials
+**Windows:**
+```powershell
+# Reset database (WARNING: deletes all data)
+cd backend
+.\venv\Scripts\activate
+python database\init_db.py reset
+
+# Re-seed data
+python database\init_db.py
 ```
+
+### MQTT / Adafruit IO Issues
+
+MQTT is optional - the app runs without it. To enable:
+1. Create account at https://io.adafruit.com
+2. Get username and AIO key
+3. Update `.env` with credentials
 
 ### Common Issues on Student Laptops
 
 | Issue | Solution |
 |-------|----------|
-| `npm: command not found` | Run `./setup.sh` to install Node.js, or manually install from nodesource |
-| `python3: command not found` | Run `sudo apt install python3 python3-pip python3-venv` |
-| `Permission denied` on run.sh | Run `chmod +x run.sh` |
+| `npm: command not found` | Install Node.js from https://nodejs.org and restart VS Code |
+| `python: command not found` | Install Python from https://python.org and check "Add to PATH" |
+| `pip: command not found` | Use `python -m pip` instead |
+| Permission denied on scripts (macOS/Linux) | Run `chmod +x setup.sh run.sh` |
 | Port already in use | Kill existing process or change ports in `.env` and `vite.config.js` |
-| Cannot access from phone | Use `--host` flag (already in `run.sh`), ensure same WiFi network |
+| Cannot access from phone | Use `--host` flag, ensure same WiFi network |
 | ESP32 timeout | Check firewall, verify IP addresses, ensure both on same network |
+| Virtual environment not activating (Windows) | Run PowerShell as Administrator, or use Command Prompt |
+| `python app.py` not found | Make sure you're in the correct directory and virtual environment is activated |
 
 ## 📝 License
 
