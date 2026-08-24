@@ -1,0 +1,6 @@
+2026-07-25 23:03:56,011 - backend.esp32_client - INFO - ESP32 communication service initialized
+2026-07-25 23:03:56,011 - backend.app - INFO - ESP32 configured at 192.168.1.100:80
+2026-07-25 23:42:36,131 - backend.esp32_client - INFO - ESP32 communication service initialized
+2026-07-25 23:42:36,131 - backend.app - INFO - ESP32 configured at 192.168.130.58:80
+2026-07-26 00:27:06,077 - backend.esp32_client - INFO - ESP32 communication service initialized
+2026-07-26 00:27:06,078 - backend.app - INFO - ESP32 configured at 192.168.130.58:80

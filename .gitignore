@@ -1,0 +1,14 @@
+.env.example
+.env
+__pycache__/
+*.pyc
+instance/
+*.db
+node_modules/
+dist/
+.DS_Store
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo

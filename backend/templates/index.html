@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fish Vending Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --success: #198754;
+        }
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+        .fish-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+        }
+        .fish-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .fish-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .price-tag {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+        .cart-sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 380px;
+            background: white;
+            box-shadow: -2px 0 15px rgba(0,0,0,0.1);
+            z-index: 1050;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .cart-sidebar.open {
+            transform: translateX(0);
+        }
+        .cart-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1040;
+            display: none;
+        }
+        .cart-overlay.open {
+            display: block;
+        }
+        .stat-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 200px;
+            padding: 10px 0;
+        }
+        .bar {
+            flex: 1;
+            background: var(--primary);
+            border-radius: 6px 6px 0 0;
+            min-height: 4px;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .bar:hover {
+            opacity: 0.8;
+        }
+        .bar-label {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            color: #6c757d;
+            white-space: nowrap;
+        }
+        .bar-value {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .spinner-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255,255,255,0.9);
+            z-index: 9999;
+        }
+        .order-card {
+            border-left: 4px solid var(--primary);
+        }
+        @media (max-width: 768px) {
+            .cart-sidebar { width: 100%; }
+            .stat-value { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showSection('dashboard')">
+                🐟 Smart Fish Vending
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('dashboard')">Browse Fish</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('orders')">My Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('admin')">Admin</a></li>
+                </ul>
+                <button class="btn btn-outline-light position-relative" onclick="toggleCart()">
+                    🛒 Cart
+                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <!-- Customer Dashboard -->
+        <div id="section-dashboard" class="section active">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-primary">🐟 Fresh Fish Vending Machine</h1>
+                <p class="lead text-muted">Select your fresh fish and complete your purchase in seconds</p>
+            </div>
+            <div id="fish-grid" class="row g-4">
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout -->
+        <div id="section-checkout" class="section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">📋 Checkout</h2>
+                    <div id="checkout-error" class="alert alert-danger" style="display:none"></div>
+                    <div class="row g-4">
+                        <div class="col-md-7">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Customer Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="checkout-form">
+                                        <div class="mb-3">
+                                            <label class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" id="cust-name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="cust-phone" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="cust-email">
+                                        </div>
+                                        <button type="submit" class="btn btn-success w-100 btn-lg" id="checkout-btn">
+                                            Place Order
+                                        </button>
+                                    </form>
+                </div>
+            </div>
+        </div>
+                        <div class="col-md-5">
+                            <div class="card shadow-sm">
+                                <div class="card-header"><h5 class="mb-0">Order Summary</h5></div>
+                                <div class="card-body" id="checkout-summary"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment -->
+        <div id="section-payment" class="section">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning">
+                            <h4 class="mb-0">💳 Fake Payment Gateway</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="alert alert-info">
+                                <strong>Demo Mode:</strong> This is a simulated payment page for demonstration.
+                            </div>
+                            <div class="card mb-4 bg-light">
+                                <div class="card-body">
+                                    <h5>Order Summary</h5>
+                                    <div id="payment-summary"></div>
+                                </div>
+                            </div>
+                            <form id="payment-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" value="4242 4242 4242 4242" readonly>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Expiry</label>
+                                        <input type="text" class="form-control" value="12/28" readonly>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">CVC</label>
+                                        <input type="text" class="form-control" value="123" readonly>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100 mt-4 btn-lg" id="pay-btn">
+                                    Pay Now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Confirmation -->
+        <div id="section-confirmation" class="section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-success text-white text-center">
+                            <h3 class="mb-0">✅ Order Confirmed</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <span id="confirm-status" class="badge fs-6 p-3">PROCESSING</span>
+                            </div>
+                            <div class="card bg-light mb-4">
+                                <div class="card-body" id="confirm-details"></div>
+                            </div>
+                            <div class="d-grid gap-2" id="confirm-actions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Tracking -->
+        <div id="section-orders" class="section">
+            <h2 class="mb-4">📋 My Order History</h2>
+            <div id="orders-list"></div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="section-admin" class="section">
+            <h2 class="mb-4">📊 Admin Dashboard</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card shadow-sm bg-primary text-white">
+                        <div class="card-body">
+                            <div class="text-white-50 text-uppercase small">Total Revenue</div>
+                            <div class="stat-value" id="stat-revenue">₹0</div>
+                            <small class="text-white-50">All time earnings</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card shadow-sm bg-success text-white">
+                        <div class="card-body">
+                            <div class="text-white-50 text-uppercase small">Total Orders</div>
+                            <div class="stat-value" id="stat-orders">0</div>
+                            <small class="text-white-50">Completed transactions</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card shadow-sm bg-info text-white">
+                        <div class="card-body">
+                            <div class="text-white-50 text-uppercase small">Fish Sold</div>
+                            <div class="stat-value" id="stat-fish-sold">0</div>
+                            <small class="text-white-50">Units sold</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card stat-card shadow-sm bg-warning text-dark">
+                        <div class="card-body">
+                            <div class="text-uppercase small">Inventory</div>
+                            <div class="stat-value" id="stat-inventory">0</div>
+                            <small>Units remaining</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header"><h5 class="mb-0">📈 Revenue (Last 7 Days)</h5></div>
+                        <div class="card-body">
+                            <div id="revenue-chart" class="bar-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm">
+                        <div class="card-header"><h5 class="mb-0">🐟 Fish Statistics</h5></div>
+                        <div class="card-body">
+                            <table class="table table-sm">
+                                <thead><tr><th>Fish</th><th>Sold</th><th>Available</th></tr></thead>
+                                <tbody id="fish-stats-table"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white"><h5 class="mb-0">🖥️ Machine Status</h5></div>
+                        <div class="card-body">
+                            <div class="row text-center" id="machine-status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-12">
+                    <div class="card shadow-sm border-danger">
+                        <div class="card-header bg-danger text-white"><h5 class="mb-0">⚠️ Database Management</h5></div>
+                        <div class="card-body">
+                            <p class="text-muted mb-3">This will <strong>permanently delete all orders, revenue records, and reset inventory</strong> to default values. Fish types will be restored to the initial 4 types.</p>
+                            <button class="btn btn-danger" onclick="resetDatabase()">🔄 Reset Database to Default</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-success text-white"><h5 class="mb-0">➕ Add New Fish Type</h5></div>
+                        <div class="card-body">
+                            <form id="add-fish-form">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Fish Name *</label>
+                                        <input type="text" class="form-control" id="new-fish-name" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Price (₹) *</label>
+                                        <input type="number" class="form-control" id="new-fish-price" step="0.01" min="0" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Quantity *</label>
+                                        <input type="number" class="form-control" id="new-fish-qty" min="0" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Compartment *</label>
+                                        <select class="form-control" id="new-fish-compartment">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Image URL</label>
+                                        <input type="text" class="form-control" id="new-fish-image" placeholder="https://...">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Description</label>
+                                        <input type="text" class="form-control" id="new-fish-desc" placeholder="Brief description">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success">➕ Add Fish</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">📦 Inventory Management</h5>
+                            <button class="btn btn-light btn-sm" onclick="loadInventory()">🔄 Refresh</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Fish Name</th>
+                                            <th>Image URL</th>
+                                            <th>Comp</th>
+                                            <th>Current Qty</th>
+                                            <th>Update Qty</th>
+                                            <th>Price (₹)</th>
+                                            <th>Update Price</th>
+                                            <th>Action</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="inventory-table">
+                                        <tr><td colspan="9" class="text-center">Loading...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar p-4" id="cart-sidebar">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0">🛒 Your Cart</h4>
+            <button class="btn btn-outline-secondary btn-sm" onclick="toggleCart()">✕</button>
+        </div>
+        <div id="cart-items"></div>
+        <div id="cart-footer"></div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center text-white-50 small">
+            © 2026 Smart Fish Vending Machine. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = '/api';
+        let currentOrderId = null;
+        let cart = [];
+
+        function api(url, options = {}) {
+            const opts = {
+                headers: { 'Content-Type': 'application/json' },
+                ...options
+            };
+            if (opts.body && typeof opts.body === 'object') {
+                opts.body = JSON.stringify(opts.body);
+            }
+            return fetch(url, opts).then(r => r.json());
+        }
+
+        function showSection(name) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById('section-' + name)?.classList.add('active');
+            if (name === 'dashboard') loadFish();
+            if (name === 'orders') loadOrders();
+            if (name === 'admin') loadAdmin();
+            window.scrollTo(0,0);
+        }
+
+        // ==================== FISH / DASHBOARD ====================
+        async function loadFish() {
+            const grid = document.getElementById('fish-grid');
+            grid.innerHTML = '<div class="col-12 text-center"><div class="spinner-border text-primary"></div></div>';
+            const res = await api(`${API_BASE}/fish`);
+            if (!res.success) return grid.innerHTML = '<div class="alert alert-danger">Failed to load fish</div>';
+            const fish = res.data;
+            if (!fish.length) return grid.innerHTML = '<div class="alert alert-info">No fish available</div>';
+            grid.innerHTML = fish.map(f => `
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card fish-card shadow-sm">
+                        <img src="${f.image_url || 'https://via.placeholder.com/400x220?text=Fish'}" class="card-img-top" alt="${f.name}" onerror="this.src='https://via.placeholder.com/400x220?text=Fish'">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">${f.name}</h5>
+                                <span class="badge ${f.quantity > 0 ? 'bg-success' : 'bg-danger'}">${f.quantity > 0 ? f.quantity + ' left' : 'Out of Stock'}</span>
+                            </div>
+                            <p class="card-text text-muted small flex-grow-1">${f.description || 'Fresh fish'}</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price-tag">₹${parseFloat(f.price).toFixed(2)}</span>
+                                </div>
+                                <button class="btn btn-primary w-100" onclick="addToCart(${f.id})" ${f.quantity === 0 ? 'disabled' : ''}>
+                                    🛒 Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ==================== CART ====================
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('open');
+            document.getElementById('cart-overlay').classList.toggle('open');
+            renderCart();
+        }
+
+        function addToCart(fishId) {
+            api(`${API_BASE}/fish/${fishId}`).then(res => {
+                if (!res.success) return alert('Fish not found');
+                const f = res.data;
+                const existing = cart.find(i => i.fishId === f.id);
+                if (existing) {
+                    existing.quantity = Math.min(existing.quantity + 1, f.quantity);
+                    updateCartBadge();
+                    renderCart();
+                    return;
+                }
+                cart.push({
+                    fishId: f.id,
+                    name: f.name,
+                    price: parseFloat(f.price),
+                    quantity: 1,
+                    image_url: f.image_url,
+                    maxQuantity: f.quantity
+                });
+                updateCartBadge();
+                renderCart();
+                document.getElementById('cart-sidebar').classList.add('open');
+                document.getElementById('cart-overlay').classList.add('open');
+            });
+        }
+
+        function removeFromCart(fishId) {
+            cart = cart.filter(i => i.fishId !== fishId);
+            updateCartBadge();
+            renderCart();
+        }
+
+        function updateCartQty(fishId, qty) {
+            const item = cart.find(i => i.fishId === fishId);
+            if (!item) return;
+            if (qty <= 0) return removeFromCart(fishId);
+            item.quantity = Math.min(qty, item.maxQuantity);
+            updateCartBadge();
+            renderCart();
+        }
+
+        function updateCartBadge() {
+            const count = cart.reduce((s, i) => s + i.quantity, 0);
+            const badge = document.getElementById('cart-badge');
+            badge.textContent = count;
+            badge.style.display = count > 0 ? 'inline' : 'none';
+        }
+
+        function getCartTotal() {
+            return cart.reduce((s, i) => s + i.price * i.quantity, 0);
+        }
+
+        function renderCart() {
+            const itemsEl = document.getElementById('cart-items');
+            const footerEl = document.getElementById('cart-footer');
+            if (!cart.length) {
+                itemsEl.innerHTML = '<div class="text-center py-5 text-muted"><div style="font-size:3rem">🛒</div><p class="mt-3">Your cart is empty</p></div>';
+                footerEl.innerHTML = '';
+                return;
+            }
+            const subtotal = getCartTotal();
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+            itemsEl.innerHTML = cart.map(i => `
+                <div class="d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="${i.image_url || 'https://via.placeholder.com/50'}" style="width:50px;height:50px;object-fit:cover;border-radius:8px">
+                        <div><div class="fw-bold">${i.name}</div><small class="text-muted">₹${i.price.toFixed(2)} each</small></div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="number" class="form-control form-control-sm" style="width:60px;text-align:center" value="${i.quantity}" min="1" max="${i.maxQuantity}" onchange="updateCartQty(${i.fishId}, this.value)">
+                        <button class="btn btn-outline-danger btn-sm" onclick="removeFromCart(${i.fishId})">✕</button>
+                    </div>
+                </div>
+            `).join('');
+            footerEl.innerHTML = `
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2"><span>Subtotal:</span><span>₹${subtotal.toFixed(2)}</span></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Tax (8%):</span><span>₹${tax.toFixed(2)}</span></div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold fs-5"><span>Total:</span><span>₹${total.toFixed(2)}</span></div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-success btn-lg" onclick="goToCheckout()">Proceed to Checkout</button>
+                    <button class="btn btn-outline-secondary" onclick="cart=[];updateCartBadge();renderCart()">Clear Cart</button>
+                </div>
+            `;
+        }
+
+        // ==================== CHECKOUT ====================
+        let currentOrderIds = [];
+        let currentOrders = [];
+
+        async function goToCheckout() {
+            if (!cart.length) return alert('Cart is empty');
+            toggleCart();
+            showSection('checkout');
+            renderCheckoutSummary();
+        }
+
+        function renderCheckoutSummary() {
+            const el = document.getElementById('checkout-summary');
+            const subtotal = getCartTotal();
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+            el.innerHTML = cart.map(i => `
+                <div class="d-flex justify-content-between mb-2"><span>${i.quantity}x ${i.name}</span><span>₹${(i.price*i.quantity).toFixed(2)}</span></div>
+            `).join('') + `
+                <hr>
+                <div class="d-flex justify-content-between"><span>Subtotal:</span><span>₹${subtotal.toFixed(2)}</span></div>
+                <div class="d-flex justify-content-between"><span>Tax (8%):</span><span>₹${tax.toFixed(2)}</span></div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold fs-5"><span>Total:</span><span>₹${total.toFixed(2)}</span></div>
+            `;
+        }
+
+        document.getElementById('checkout-form')?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('checkout-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+            const res = await api(`${API_BASE}/checkout`, {
+                method: 'POST',
+                body: {
+                    items: cart.map(i => ({ fishId: i.fishId, qty: i.quantity })),
+                    customerName: document.getElementById('cust-name').value,
+                    customerPhone: document.getElementById('cust-phone').value
+                }
+            });
+            if (res.success) {
+                currentOrderIds = res.orders.map(o => o.id);
+                currentOrders = res.orders;
+                cart = [];
+                updateCartBadge();
+                showSection('payment');
+                renderPaymentSummary(res.orders);
+            } else {
+                document.getElementById('checkout-error').textContent = res.error || 'Checkout failed';
+                document.getElementById('checkout-error').style.display = 'block';
+            }
+            btn.disabled = false;
+            btn.textContent = 'Place Order';
+        });
+
+        function renderPaymentSummary(orders) {
+            const subtotal = orders.reduce((s, o) => s + parseFloat(o.total_price), 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+            document.getElementById('payment-summary').innerHTML = orders.map(o => `
+                <div class="d-flex justify-content-between mb-2"><span>${o.quantity}x ${o.fish_name}</span><span>₹${parseFloat(o.total_price).toFixed(2)}</span></div>
+            `).join('') + `
+                <hr>
+                <div class="d-flex justify-content-between"><span>Subtotal:</span><span>₹${subtotal.toFixed(2)}</span></div>
+                <div class="d-flex justify-content-between"><span>Tax (8%):</span><span>₹${tax.toFixed(2)}</span></div>
+                <hr>
+                <div class="d-flex justify-content-between fw-bold fs-5"><span>Total:</span><span>₹${total.toFixed(2)}</span></div>
+            `;
+        }
+
+        document.getElementById('payment-form')?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('pay-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+
+            let allSuccess = true;
+            for (let i = 0; i < currentOrderIds.length; i++) {
+                const orderId = currentOrderIds[i];
+                const res = await api(`${API_BASE}/payment/process`, {
+                    method: 'POST',
+                    body: { orderId }
+                });
+                if (!res.success) {
+                    alert('Payment failed for order ' + orderId + ': ' + (res.error || 'Unknown error'));
+                    allSuccess = false;
+                    break;
+                }
+                if (i < currentOrderIds.length - 1) {
+                    await new Promise(r => setTimeout(r, 25000));
+                }
+            }
+
+            if (allSuccess) {
+                await triggerDispense();
+                showSection('confirmation');
+                renderConfirmation(currentOrders);
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Pay Now';
+        });
+
+        async function triggerDispense() {
+            try {
+                for (let orderId of currentOrderIds) {
+                    const orderRes = await api(`${API_BASE}/order/${orderId}`);
+                    const order = orderRes.data;
+                    await fetch('/dispense', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ orderId: order.id, fishType: order.fish_type, qty: order.quantity })
+                    });
+                    await new Promise(r => setTimeout(r, 25000));
+                }
+            } catch (e) { console.error('Dispense error', e); }
+        }
+
+        function renderConfirmation(orders) {
+            if (!Array.isArray(orders)) orders = [orders];
+            document.getElementById('confirm-details').innerHTML = orders.map(o => `
+                <div class="row mb-2">
+                    <div class="col-md-6"><p class="mb-1"><strong>Order ID:</strong></p><p class="fs-5 text-primary">${o.id}</p></div>
+                    <div class="col-md-6"><p class="mb-1"><strong>Fish:</strong></p><p>${o.fish_name} x${o.quantity}</p></div>
+                </div>
+                <hr>
+            `).join('') + `
+                <div class="row">
+                    <div class="col-md-6"><p class="mb-1"><strong>Total Amount:</strong></p><p class="fs-4 fw-bold text-success">₹${parseFloat(orders.reduce((s, o) => s + o.total_price, 0)).toFixed(2)}</p></div>
+                    <div class="col-md-6"><p class="mb-1"><strong>Date:</strong></p><p>${new Date(orders[0].created_at).toLocaleString()}</p></div>
+                </div>
+            `;
+            document.getElementById('confirm-status').textContent = 'DISPENSING';
+            document.getElementById('confirm-actions').innerHTML = `
+                <button class="btn btn-primary btn-lg" onclick="showSection('orders')">View All Orders</button>
+                <button class="btn btn-outline-secondary" onclick="showSection('dashboard')">Continue Shopping</button>
+            `;
+        }
+
+        // ==================== ORDERS ====================
+        async function loadOrders() {
+            const res = await api(`${API_BASE}/orders`);
+            const list = document.getElementById('orders-list');
+            if (!res.success || !res.data.length) {
+                list.innerHTML = '<div class="alert alert-info text-center">No orders yet</div>';
+                return;
+            }
+            const statusColors = { pending: 'warning', processing: 'info', dispensing: 'primary', completed: 'success', cancelled: 'danger' };
+            list.innerHTML = res.data.map(o => `
+                <div class="card order-card shadow-sm mb-3">
+                    <div class="card-header d-flex justify-content-between">
+                        <span class="badge bg-primary">${o.id}</span>
+                        <span class="badge bg-${statusColors[o.status] || 'secondary'}">${o.status}</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">${o.fish_name}</h5>
+                        ${o.compartment ? `<div class="d-flex justify-content-between mb-2"><span>Compartment:</span><span>#${o.compartment}</span></div>` : ''}
+                        <div class="d-flex justify-content-between mb-2"><span>Quantity:</span><span>${o.quantity}</span></div>
+                        <div class="d-flex justify-content-between mb-2"><span>Total:</span><span class="fw-bold">₹${parseFloat(o.total_price).toFixed(2)}</span></div>
+                        <div class="d-flex justify-content-between text-muted small"><span>Date:</span><span>${new Date(o.created_at).toLocaleDateString()}</span></div>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary btn-sm w-100" onclick="viewOrder('${o.id}')">View Details</button>
+                            <button class="btn btn-outline-danger btn-sm w-100" onclick="deleteOrder('${o.id}')">Delete Order</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function viewOrder(orderId) {
+            currentOrderId = orderId;
+            const res = await api(`${API_BASE}/order/${orderId}`);
+            if (res.success) {
+                showSection('confirmation');
+                renderConfirmation(res.data);
+            }
+        }
+
+        async function deleteOrder(orderId) {
+            if (!confirm('Are you sure you want to delete this order?')) return;
+            const res = await api(`${API_BASE}/order/${orderId}`, { method: 'DELETE' });
+            if (res.success) {
+                loadOrders();
+            } else {
+                alert(res.error || 'Failed to delete order');
+            }
+        }
+
+        // ==================== ADMIN ====================
+        async function loadAdmin() {
+            const [statsRes, revRes, fishRes] = await Promise.all([
+                api(`${API_BASE}/dashboard/stats`),
+                api(`${API_BASE}/dashboard/revenue`),
+                api(`${API_BASE}/dashboard/fish-stats`)
+            ]);
+            if (statsRes.success) {
+                const s = statsRes.data;
+                document.getElementById('stat-revenue').textContent = '₹' + parseFloat(s.total_revenue).toFixed(2);
+                document.getElementById('stat-orders').textContent = s.total_orders;
+                document.getElementById('stat-fish-sold').textContent = s.total_fish_sold;
+                document.getElementById('stat-inventory').textContent = s.available_inventory;
+                renderMachineStatus(s);
+            }
+            if (revRes.success && revRes.data.length) {
+                const maxRev = Math.max(...revRes.data.map(d => d.revenue), 1);
+                document.getElementById('revenue-chart').innerHTML = revRes.data.map(d => {
+                    const h = Math.max((d.revenue / maxRev) * 100, 2);
+                    const label = new Date(d.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+                    return `<div class="bar" style="height:${h}%"><div class="bar-value">₹${parseFloat(d.revenue).toFixed(0)}</div><div class="bar-label">${label}</div></div>`;
+                }).join('');
+            }
+            if (fishRes.success) {
+                document.getElementById('fish-stats-table').innerHTML = fishRes.data.map(f => `
+                    <tr>
+                        <td>${f.name}</td>
+                        <td>${f.sold}</td>
+                        <td><span class="badge ${f.available > 10 ? 'bg-success' : f.available > 0 ? 'bg-warning' : 'bg-danger'}">${f.available}</span></td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        function renderMachineStatus(s) {
+            const el = document.getElementById('machine-status');
+            if (!s || !s.machine_status) return;
+            const m = s.machine_status;
+            const lastUpdate = m.updated_at ? new Date(m.updated_at).toLocaleTimeString() : 'Never';
+            el.innerHTML = `
+                <div class="col-md-3 p-3">
+                    <div class="${s.machine_online ? 'text-success' : 'text-danger'}" style="font-size:2.5rem">${s.machine_online ? '🟢' : '🔴'}</div>
+                    <h5>${s.machine_online ? 'Online' : 'Offline'}</h5>
+                    <small class="text-muted">Last update: ${lastUpdate}</small>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="text-info" style="font-size:2.5rem">🌡️</div>
+                    <h5>${m.temperature}°C</h5>
+                    <small class="text-muted">Temperature</small>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="text-primary" style="font-size:2.5rem">💧</div>
+                    <h5>${m.humidity}%</h5>
+                    <small class="text-muted">Humidity</small>
+                </div>
+                <div class="col-md-3 p-3">
+                    <div class="text-success" style="font-size:2.5rem">🐟</div>
+                    <h5>${s.fish_types}</h5>
+                    <small class="text-muted">Fish Types</small>
+                </div>
+            `;
+        }
+
+        // ==================== INVENTORY MANAGEMENT ====================
+        async function loadInventory() {
+            const res = await api(`${API_BASE}/fish`);
+            const tbody = document.getElementById('inventory-table');
+            if (!res.success) {
+                tbody.innerHTML = '<tr><td colspan="9" class="text-center text-danger">Failed to load inventory</td></tr>';
+                return;
+            }
+            const fish = res.data;
+            tbody.innerHTML = fish.map(f => `
+                <tr>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" id="inv-name-${f.id}" value="${f.name}" style="width:140px">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control form-control-sm" id="inv-img-${f.id}" value="${f.image_url || ''}" placeholder="https://..." style="width:200px">
+                    </td>
+                    <td>
+                        <input type="number" class="form-control form-control-sm" id="inv-comp-${f.id}" value="${f.compartment || 0}" min="0" max="4" style="width:60px">
+                    </td>
+                    <td><span class="badge bg-info">${f.quantity}</span></td>
+                    <td>
+                        <input type="number" class="form-control form-control-sm" id="inv-qty-${f.id}" value="${f.quantity}" min="0" max="100" style="width:80px">
+                    </td>
+                    <td>₹${parseFloat(f.price).toFixed(2)}</td>
+                    <td>
+                        <input type="number" class="form-control form-control-sm" id="inv-price-${f.id}" value="${parseFloat(f.price).toFixed(2)}" min="0" step="0.01" style="width:100px">
+                    </td>
+                    <td>
+                        <button class="btn btn-success btn-sm" onclick="updateInventory(${f.id})">💾 Save</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm" onclick="deleteFish(${f.id})">🗑️ Delete</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        async function updateInventory(fishId) {
+            const name = document.getElementById(`inv-name-${fishId}`).value.trim();
+            const imageUrl = document.getElementById(`inv-img-${fishId}`).value.trim();
+            const qty = parseInt(document.getElementById(`inv-qty-${fishId}`).value);
+            const price = parseFloat(document.getElementById(`inv-price-${fishId}`).value);
+            const comp = parseInt(document.getElementById(`inv-comp-${fishId}`).value);
+            if (!name) return alert('Fish name cannot be empty');
+            if (isNaN(qty) || qty < 0) return alert('Invalid quantity');
+            if (isNaN(price) || price <= 0) return alert('Invalid price');
+            if (isNaN(comp) || comp < 0 || comp > 4) return alert('Compartment must be 0-4');
+
+            const body = { name, quantity: qty, price: price, compartment: comp };
+            if (imageUrl) body.image_url = imageUrl;
+
+            const res = await api(`${API_BASE}/fish/${fishId}`, {
+                method: 'PUT',
+                body
+            });
+            if (res.success) {
+                alert('Inventory updated successfully!');
+                loadInventory();
+                loadAdmin();
+                loadFish();
+            } else {
+                alert('Failed to update: ' + (res.error || 'Unknown error'));
+            }
+        }
+
+        async function deleteFish(fishId) {
+            if (!confirm('Are you sure you want to delete this fish? This action cannot be undone.')) return;
+            const res = await api(`${API_BASE}/fish/${fishId}`, { method: 'DELETE' });
+            if (res.success) {
+                alert('Fish deleted successfully!');
+                loadInventory();
+                loadAdmin();
+                loadFish();
+            } else {
+                alert('Failed to delete: ' + (res.error || 'Unknown error'));
+            }
+        }
+
+        async function resetDatabase() {
+            if (!confirm('WARNING: This will DELETE all orders, revenue data, and reset inventory to defaults. Are you absolutely sure?')) return;
+            const confirmText = prompt('Type "RESET" to confirm database reset:');
+            if (confirmText !== 'RESET') return;
+
+            const btn = event.target;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Resetting...';
+
+            try {
+                const res = await api(`${API_BASE}/admin/reset-database`, { method: 'POST' });
+                if (res.success) {
+                    alert('Database has been reset to default values.');
+                    loadInventory();
+                    loadAdmin();
+                    loadFish();
+                } else {
+                    alert('Failed to reset database: ' + (res.error || 'Unknown error'));
+                }
+            } catch (e) {
+                alert('Error resetting database: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🔄 Reset Database to Default';
+            }
+        }
+
+        document.getElementById('add-fish-form')?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('new-fish-name').value;
+            const price = parseFloat(document.getElementById('new-fish-price').value);
+            const qty = parseInt(document.getElementById('new-fish-qty').value);
+            const comp = parseInt(document.getElementById('new-fish-compartment').value);
+            const image = document.getElementById('new-fish-image').value;
+            const desc = document.getElementById('new-fish-desc').value;
+
+            if (!name || isNaN(price) || isNaN(qty)) return alert('Please fill required fields');
+
+            const res = await api(`${API_BASE}/fish`, {
+                method: 'POST',
+                body: { name, price, quantity: qty, compartment: comp, image_url: image, description: desc }
+            });
+            if (res.success) {
+                alert('Fish added successfully!');
+                document.getElementById('add-fish-form').reset();
+                loadInventory();
+                loadAdmin();
+                loadFish();
+            } else {
+                alert('Failed to add fish: ' + (res.error || 'Unknown error'));
+            }
+        });
+
+        // Init
+        loadFish();
+        loadInventory();
+    </script>
+</body>
+</html>
