@@ -4,3 +4,1231 @@
 2026-07-25 23:42:36,131 - backend.app - INFO - ESP32 configured at 192.168.130.58:80
 2026-07-26 00:27:06,077 - backend.esp32_client - INFO - ESP32 communication service initialized
 2026-07-26 00:27:06,078 - backend.app - INFO - ESP32 configured at 192.168.130.58:80
+2026-08-24 18:31:45,100 - backend.esp32_client - INFO - ESP32 communication service initialized
+2026-08-24 18:31:45,101 - backend.app - INFO - ESP32 configured at 192.168.1.100:80
+2026-08-24 18:39:48,038 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-24 18:39:48,039 - __main__ - INFO - ESP32 configured at 192.168.1.100:80
+2026-08-24 18:39:48,199 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.48.187.50:5050
+2026-08-24 18:39:48,199 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-08-24 18:39:48,204 - werkzeug - INFO -  * Restarting with stat
+2026-08-24 18:39:49,920 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-24 18:39:49,922 - __main__ - INFO - ESP32 configured at 192.168.1.100:80
+2026-08-24 18:39:49,978 - werkzeug - WARNING -  * Debugger is active!
+2026-08-24 18:39:49,995 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-08-24 18:39:57,819 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:39:57] "GET / HTTP/1.1" 200 -
+2026-08-24 18:39:58,514 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:39:58] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:39:58,522 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:39:58] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:39:58,550 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:39:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-08-24 18:40:04,216 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:04] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:40:04,221 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:04] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:40:04,223 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:04] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:40:06,855 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:06] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 18:40:07,772 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:07] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:40:11,671 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:11] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:40:11,675 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:11] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:40:11,677 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:11] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:40:39,638 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:39] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:40:43,040 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:43] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 18:40:46,309 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:46] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:40:46,314 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:46] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:40:46,327 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:40:46] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:41:00,563 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:00] "PUT /api/fish/1 HTTP/1.1" 200 -
+2026-08-24 18:41:02,106 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:02] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:41:02,125 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:02] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:41:02,132 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:02] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:41:02,138 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:02] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:41:02,145 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:02] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:41:05,705 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:05] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:41:10,948 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:10] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:41:10,962 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:10] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:41:10,973 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:41:10] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:43:12,690 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:12] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:43:12,692 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:12] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:43:12,702 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:12] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:43:14,600 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:14] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:43:14,607 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:14] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:43:14,617 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:43:14] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:45:17,772 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:17] "GET / HTTP/1.1" 200 -
+2026-08-24 18:45:17,861 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:17] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:45:17,867 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:17] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:45:24,417 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:24] "GET / HTTP/1.1" 200 -
+2026-08-24 18:45:24,509 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:24] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:45:24,515 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:24] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:45:26,979 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:26] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 18:45:28,167 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:28] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:45:28,187 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:28] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:45:28,189 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:28] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:45:32,123 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:45:32] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:52:12,554 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:12] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 18:52:12,558 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:12] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 18:52:12,572 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:12] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 18:52:14,364 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:14] "GET / HTTP/1.1" 200 -
+2026-08-24 18:52:14,458 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:14] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 18:52:14,472 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 18:52:14] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:02:54,006 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:54] "GET / HTTP/1.1" 200 -
+2026-08-24 19:02:54,088 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:54] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:02:54,094 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:54] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:02:56,387 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:56] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:02:57,937 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:57] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 19:02:59,533 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:59] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:02:59,538 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:59] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:02:59,547 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:02:59] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:30:19,652 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:19] "GET / HTTP/1.1" 200 -
+2026-08-24 19:30:19,747 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:19] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:30:19,753 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:19] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:30:23,015 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:23] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:30:23,021 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:23] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:30:23,022 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:30:23] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:32:59,501 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:32:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:32:59,872 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:32:59] "GET / HTTP/1.1" 200 -
+2026-08-24 19:32:59,964 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:32:59] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:32:59,971 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:32:59] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:33:02,383 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:02] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:33:02,385 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:02] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:33:02,388 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:02] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:33:12,113 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:12] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:33:14,179 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:14] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-08-24 19:33:25,707 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:33:25] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-24 19:33:27,752 - routes - INFO - Sending dispense request to ESP32 for order ORD0167
+2026-08-24 19:33:27,753 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD0167', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-08-24 19:33:27,753 - esp32_client - INFO - ESP32 request attempt 1/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:33:29,202 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:33:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:33:48,861 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-08-24 19:33:48,862 - esp32_client - INFO - Retrying in 5s...
+2026-08-24 19:33:53,863 - esp32_client - INFO - ESP32 request attempt 2/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:33:59,404 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:33:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:34:14,902 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-08-24 19:34:14,903 - esp32_client - INFO - Retrying in 5s...
+2026-08-24 19:34:16,570 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:16] "GET / HTTP/1.1" 200 -
+2026-08-24 19:34:16,647 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:16] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:34:16,655 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:16] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:34:19,844 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:19] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-08-24 19:34:19,904 - esp32_client - INFO - ESP32 request attempt 3/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:34:26,904 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:26] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:34:26,912 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:26] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:34:26,914 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:26] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:34:28,826 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:28] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:34:29,308 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:34:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:34:35,114 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:35] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-24 19:34:37,010 - routes - INFO - Sending dispense request to ESP32 for order ORD5439
+2026-08-24 19:34:37,010 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD5439', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-08-24 19:34:37,010 - esp32_client - INFO - ESP32 request attempt 1/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:34:40,971 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-08-24 19:34:40,980 - routes - ERROR - ESP32 dispense failed for order ORD0167: Machine did not respond (TIMEOUT)
+2026-08-24 19:34:40,982 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:34:40] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-08-24 19:34:58,041 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-08-24 19:34:58,042 - esp32_client - INFO - Retrying in 5s...
+2026-08-24 19:34:59,249 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:34:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:35:03,043 - esp32_client - INFO - ESP32 request attempt 2/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:35:24,088 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-08-24 19:35:24,089 - esp32_client - INFO - Retrying in 5s...
+2026-08-24 19:35:29,090 - esp32_client - INFO - ESP32 request attempt 3/3 to http://192.168.1.100:80/dispense
+2026-08-24 19:35:29,312 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:35:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:35:37,554 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:35:37] "GET / HTTP/1.1" 200 -
+2026-08-24 19:35:37,681 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:35:37] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:35:37,695 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:35:37] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:35:50,153 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-08-24 19:35:50,184 - routes - ERROR - ESP32 dispense failed for order ORD5439: Machine did not respond (TIMEOUT)
+2026-08-24 19:35:50,185 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:35:50] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-08-24 19:35:59,625 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:35:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:36:31,414 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:36:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:36:59,547 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:36:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:37:14,320 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:14] "GET / HTTP/1.1" 200 -
+2026-08-24 19:37:14,417 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:14] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:37:14,425 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:14] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:37:19,268 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:19] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 19:37:23,880 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:23] "GET /api/order/ORD5439 HTTP/1.1" 200 -
+2026-08-24 19:37:29,237 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:37:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:37:30,366 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:30] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 19:37:32,687 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:32] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:37:32,694 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:32] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:37:32,696 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:32] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:37:47,186 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:47] "POST /api/admin/reset-database HTTP/1.1" 200 -
+2026-08-24 19:37:49,026 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:49] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:37:49,045 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:49] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:37:49,052 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:49] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:37:49,056 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:49] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:37:49,058 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:49] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:37:53,087 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:53] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 19:37:56,312 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:56] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 19:37:56,320 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:56] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 19:37:56,327 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 19:37:56] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 19:37:59,434 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:37:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:38:29,329 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:38:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 19:38:59,434 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 19:38:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:41:08,914 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-24 21:41:08,916 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-24 21:41:08,998 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.48.187.50:5050
+2026-08-24 21:41:08,998 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-08-24 21:41:09,002 - werkzeug - INFO -  * Restarting with stat
+2026-08-24 21:41:10,598 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-24 21:41:10,598 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-24 21:41:10,639 - werkzeug - WARNING -  * Debugger is active!
+2026-08-24 21:41:10,683 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-08-24 21:41:18,358 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:18] "GET / HTTP/1.1" 200 -
+2026-08-24 21:41:18,595 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:18] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:41:18,604 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:18] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:41:23,100 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:41:23,110 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:41:23,114 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:41:23,625 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:41:23,629 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:41:23,635 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:23] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:41:27,323 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:41:27] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:41:28,017 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:28] "GET / HTTP/1.1" 200 -
+2026-08-24 21:41:28,134 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:28] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:41:28,143 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:28] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:41:30,200 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:30] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:41:30,201 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:30] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:41:30,205 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:30] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:41:36,573 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:36] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:41:38,869 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:38] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-08-24 21:41:45,676 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:45] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-24 21:41:47,294 - routes - INFO - Sending dispense request to ESP32 for order ORD1034
+2026-08-24 21:41:47,294 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD1034', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-08-24 21:41:47,294 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-24 21:41:47,407 - esp32_client - INFO - ESP32 response status: 200
+2026-08-24 21:41:47,407 - esp32_client - INFO - Dispense request successful for order ORD1034
+2026-08-24 21:41:47,422 - routes - INFO - Payment processed and order ORD1034 sent to ESP32
+2026-08-24 21:41:47,423 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:47] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-24 21:41:47,438 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:47] "GET /api/order/ORD1034 HTTP/1.1" 200 -
+2026-08-24 21:41:47,461 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:41:47] "POST /dispense HTTP/1.1" 200 -
+2026-08-24 21:42:06,282 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:42:06] "POST /api/order/ORD1034/complete HTTP/1.1" 200 -
+2026-08-24 21:42:06,478 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:42:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:42:31,357 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:42:31] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 21:42:36,514 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:42:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:42:41,621 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:42:41] "GET /api/order/ORD1034 HTTP/1.1" 200 -
+2026-08-24 21:42:47,852 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:42:47] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:42:47,859 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:42:47] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:42:47,870 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:42:47] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:43:06,638 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:43:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:43:36,443 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:43:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:44:06,416 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:44:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:44:36,542 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:44:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:45:06,646 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:45:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:45:36,537 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:45:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:46:06,658 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:46:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:46:36,535 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:46:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:47:06,659 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:47:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:47:36,540 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:47:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:48:06,666 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:48:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:48:36,563 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:48:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:49:03,709 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:03] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:49:06,492 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:49:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:49:07,275 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:07] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-08-24 21:49:15,025 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:15] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-08-24 21:49:19,016 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:19] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-08-24 21:49:30,179 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:30] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 21:49:34,980 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:34] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:49:34,988 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:34] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:49:34,993 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:34] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:49:36,567 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:49:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:49:40,042 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:40] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:49:54,570 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:54] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:49:54,588 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:54] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:49:54,603 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:54] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:49:55,594 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:55] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:49:55,600 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:55] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:49:55,614 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:55] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:49:59,572 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:49:59] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:50:05,350 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:05] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-24 21:50:07,707 - routes - INFO - Sending dispense request to ESP32 for order ORD4107
+2026-08-24 21:50:07,707 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4107', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-08-24 21:50:07,708 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-24 21:50:09,471 - esp32_client - INFO - ESP32 response status: 200
+2026-08-24 21:50:09,471 - esp32_client - INFO - Dispense request successful for order ORD4107
+2026-08-24 21:50:09,499 - routes - INFO - Payment processed and order ORD4107 sent to ESP32
+2026-08-24 21:50:09,500 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:09] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-24 21:50:28,384 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:50:28] "POST /api/order/ORD4107/complete HTTP/1.1" 200 -
+2026-08-24 21:50:34,512 - routes - INFO - Sending dispense request to ESP32 for order ORD3228
+2026-08-24 21:50:34,512 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD3228', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-08-24 21:50:34,512 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-24 21:50:34,739 - esp32_client - INFO - ESP32 response status: 200
+2026-08-24 21:50:34,739 - esp32_client - INFO - Dispense request successful for order ORD3228
+2026-08-24 21:50:34,763 - routes - INFO - Payment processed and order ORD3228 sent to ESP32
+2026-08-24 21:50:34,764 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:34] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-24 21:50:53,778 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:50:53] "POST /api/order/ORD3228/complete HTTP/1.1" 200 -
+2026-08-24 21:50:53,963 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:50:53] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:50:59,779 - routes - INFO - Sending dispense request to ESP32 for order ORD0853
+2026-08-24 21:50:59,780 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD0853', 'compartment': 4, 'fishName': 'Catfish', 'qty': 1}
+2026-08-24 21:50:59,780 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-24 21:50:59,923 - esp32_client - INFO - ESP32 response status: 200
+2026-08-24 21:50:59,923 - esp32_client - INFO - Dispense request successful for order ORD0853
+2026-08-24 21:50:59,946 - routes - INFO - Payment processed and order ORD0853 sent to ESP32
+2026-08-24 21:50:59,947 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:59] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-24 21:50:59,958 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:59] "GET /api/order/ORD4107 HTTP/1.1" 200 -
+2026-08-24 21:50:59,974 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:50:59] "POST /dispense HTTP/1.1" 200 -
+2026-08-24 21:51:18,977 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:51:18] "POST /api/order/ORD0853/complete HTTP/1.1" 200 -
+2026-08-24 21:51:24,090 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:51:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:51:24,996 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:51:24] "GET /api/order/ORD3228 HTTP/1.1" 200 -
+2026-08-24 21:51:25,036 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:51:25] "POST /dispense HTTP/1.1" 200 -
+2026-08-24 21:51:50,058 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:51:50] "GET /api/order/ORD0853 HTTP/1.1" 200 -
+2026-08-24 21:51:50,099 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:51:50] "POST /dispense HTTP/1.1" 200 -
+2026-08-24 21:51:53,918 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:51:53] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:52:24,098 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:52:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:52:54,203 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:52:54] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:53:24,308 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:53:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:53:54,002 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:53:54] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:54:24,110 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:54:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:54:24,256 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:54:24] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 21:54:33,019 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:54:33] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-24 21:54:33,042 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:54:33] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-24 21:54:33,054 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:54:33] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-24 21:54:54,006 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:54:54] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:55:24,116 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:55:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:55:32,638 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:55:32] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 21:55:33,776 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:55:33] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:55:54,213 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:55:54] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:56:24,124 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:56:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:57:01,396 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:01] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-08-24 21:57:04,515 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:04] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-24 21:57:05,977 - routes - INFO - Sending dispense request to ESP32 for order ORD6880
+2026-08-24 21:57:05,977 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD6880', 'compartment': 4, 'fishName': 'Catfish', 'qty': 1}
+2026-08-24 21:57:05,977 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-24 21:57:06,303 - esp32_client - INFO - ESP32 response status: 200
+2026-08-24 21:57:06,303 - esp32_client - INFO - Dispense request successful for order ORD6880
+2026-08-24 21:57:06,326 - routes - INFO - Payment processed and order ORD6880 sent to ESP32
+2026-08-24 21:57:06,326 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:06] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-24 21:57:06,344 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:06] "GET /api/order/ORD6880 HTTP/1.1" 200 -
+2026-08-24 21:57:06,359 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:06] "POST /dispense HTTP/1.1" 200 -
+2026-08-24 21:57:25,459 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:57:25] "POST /api/order/ORD6880/complete HTTP/1.1" 200 -
+2026-08-24 21:57:26,425 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:57:26] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:57:38,901 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:38] "GET /api/orders HTTP/1.1" 200 -
+2026-08-24 21:57:49,092 - werkzeug - INFO - 10.48.187.50 - - [24/Aug/2026 21:57:49] "GET /api/fish HTTP/1.1" 200 -
+2026-08-24 21:57:55,921 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:57:55] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-24 21:58:25,996 - werkzeug - INFO - 10.48.187.58 - - [24/Aug/2026 21:58:25] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 21:57:57,126 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-25 21:57:57,127 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-25 21:57:57,234 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://192.168.0.112:5050
+2026-08-25 21:57:57,234 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-08-25 21:57:57,234 - werkzeug - INFO -  * Restarting with stat
+2026-08-25 21:57:58,930 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-25 21:57:58,930 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-25 21:57:58,971 - werkzeug - WARNING -  * Debugger is active!
+2026-08-25 21:57:58,980 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-08-25 22:06:36,587 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:06:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:07:06,239 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:07:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:07:55,151 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:07:55] "GET / HTTP/1.1" 200 -
+2026-08-25 22:07:55,859 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:07:55] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:07:55,896 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:07:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-08-25 22:07:55,900 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:07:55] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:08:09,685 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:09] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-08-25 22:08:15,358 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:15] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-25 22:08:16,494 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:08:16] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:08:16,841 - routes - INFO - Sending dispense request to ESP32 for order ORD6005
+2026-08-25 22:08:16,842 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD6005', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-08-25 22:08:16,844 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:08:17,126 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:08:17,126 - esp32_client - INFO - Dispense request successful for order ORD6005
+2026-08-25 22:08:17,157 - routes - INFO - Payment processed and order ORD6005 sent to ESP32
+2026-08-25 22:08:17,160 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:17] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:08:17,169 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:17] "GET /api/order/ORD6005 HTTP/1.1" 200 -
+2026-08-25 22:08:17,187 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:17] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:08:36,141 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:08:36] "POST /api/order/ORD6005/complete HTTP/1.1" 200 -
+2026-08-25 22:08:46,409 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:08:46] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:08:50,551 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:50] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:08:52,369 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:52] "GET /api/fish/2 HTTP/1.1" 200 -
+2026-08-25 22:08:55,475 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:55] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-25 22:08:57,461 - routes - INFO - Sending dispense request to ESP32 for order ORD1898
+2026-08-25 22:08:57,461 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD1898', 'compartment': 2, 'fishName': 'Salmon', 'qty': 1}
+2026-08-25 22:08:57,461 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:08:57,663 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:08:57,663 - esp32_client - INFO - Dispense request successful for order ORD1898
+2026-08-25 22:08:57,692 - routes - INFO - Payment processed and order ORD1898 sent to ESP32
+2026-08-25 22:08:57,692 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:57] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:08:57,701 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:57] "GET /api/order/ORD1898 HTTP/1.1" 200 -
+2026-08-25 22:08:57,714 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:08:57] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:09:17,023 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:09:17] "POST /api/order/ORD1898/complete HTTP/1.1" 200 -
+2026-08-25 22:09:17,524 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:09:17] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:09:47,415 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:09:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:10:47,435 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:10:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:11:08,494 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:08] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:11:10,914 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:10] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-08-25 22:11:17,304 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:11:17] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:11:18,506 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:18] "GET /api/fish/2 HTTP/1.1" 200 -
+2026-08-25 22:11:21,219 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:21] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-08-25 22:11:24,715 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:24] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-08-25 22:11:42,959 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:42] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:11:47,433 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:11:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:11:54,458 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:54] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-08-25 22:11:59,101 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:11:59] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-25 22:12:00,786 - routes - INFO - Sending dispense request to ESP32 for order ORD4128
+2026-08-25 22:12:00,786 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4128', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-08-25 22:12:00,786 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:12:00,954 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:12:00,969 - esp32_client - INFO - Dispense request successful for order ORD4128
+2026-08-25 22:12:00,978 - routes - INFO - Payment processed and order ORD4128 sent to ESP32
+2026-08-25 22:12:00,978 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:12:00] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:12:19,897 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:12:19] "POST /api/order/ORD4128/complete HTTP/1.1" 200 -
+2026-08-25 22:12:20,202 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:12:20] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:12:25,990 - routes - INFO - Sending dispense request to ESP32 for order ORD8247
+2026-08-25 22:12:25,990 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD8247', 'compartment': 2, 'fishName': 'Salmon', 'qty': 1}
+2026-08-25 22:12:25,990 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:12:26,153 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:12:26,153 - esp32_client - INFO - Dispense request successful for order ORD8247
+2026-08-25 22:12:26,176 - routes - INFO - Payment processed and order ORD8247 sent to ESP32
+2026-08-25 22:12:26,176 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:12:26] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:12:45,184 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:12:45] "POST /api/order/ORD8247/complete HTTP/1.1" 200 -
+2026-08-25 22:12:50,001 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:12:50] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:12:51,190 - routes - INFO - Sending dispense request to ESP32 for order ORD7622
+2026-08-25 22:12:51,190 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD7622', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-08-25 22:12:51,190 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:12:51,339 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:12:51,340 - esp32_client - INFO - Dispense request successful for order ORD7622
+2026-08-25 22:12:51,347 - routes - INFO - Payment processed and order ORD7622 sent to ESP32
+2026-08-25 22:12:51,348 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:12:51] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:13:10,377 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:13:10] "POST /api/order/ORD7622/complete HTTP/1.1" 200 -
+2026-08-25 22:13:16,367 - routes - INFO - Sending dispense request to ESP32 for order ORD6049
+2026-08-25 22:13:16,367 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD6049', 'compartment': 4, 'fishName': 'Catfish', 'qty': 1}
+2026-08-25 22:13:16,367 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:13:16,548 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:13:16,549 - esp32_client - INFO - Dispense request successful for order ORD6049
+2026-08-25 22:13:16,557 - routes - INFO - Payment processed and order ORD6049 sent to ESP32
+2026-08-25 22:13:16,558 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:16] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:13:16,567 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:16] "GET /api/order/ORD4128 HTTP/1.1" 200 -
+2026-08-25 22:13:16,585 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:16] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:13:36,083 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:13:36] "POST /api/order/ORD6049/complete HTTP/1.1" 200 -
+2026-08-25 22:13:37,011 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:13:37] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:13:41,616 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:41] "GET /api/order/ORD8247 HTTP/1.1" 200 -
+2026-08-25 22:13:41,631 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:41] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:13:53,777 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:53] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-08-25 22:13:53,777 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:53] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-08-25 22:13:53,782 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:53] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-08-25 22:13:57,937 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:13:57] "GET /api/orders HTTP/1.1" 200 -
+2026-08-25 22:14:02,466 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:02] "GET /api/orders HTTP/1.1" 200 -
+2026-08-25 22:14:06,490 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:14:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:14:06,646 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:06] "GET /api/order/ORD7622 HTTP/1.1" 200 -
+2026-08-25 22:14:06,693 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:06] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:14:31,700 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:31] "GET /api/order/ORD6049 HTTP/1.1" 200 -
+2026-08-25 22:14:31,738 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:31] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:14:36,601 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:14:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:14:45,393 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:45] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:14:48,364 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:48] "GET /api/fish/2 HTTP/1.1" 200 -
+2026-08-25 22:14:56,136 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:14:56] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-25 22:15:00,609 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:00] "GET /api/orders HTTP/1.1" 200 -
+2026-08-25 22:15:06,714 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:15:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:15:07,801 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:07] "GET /api/fish HTTP/1.1" 200 -
+2026-08-25 22:15:09,226 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:09] "GET /api/fish/2 HTTP/1.1" 200 -
+2026-08-25 22:15:12,506 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:12] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-08-25 22:15:13,982 - routes - INFO - Sending dispense request to ESP32 for order ORD2443
+2026-08-25 22:15:13,982 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD2443', 'compartment': 2, 'fishName': 'Salmon', 'qty': 1}
+2026-08-25 22:15:13,982 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-08-25 22:15:17,147 - esp32_client - INFO - ESP32 response status: 200
+2026-08-25 22:15:17,148 - esp32_client - INFO - Dispense request successful for order ORD2443
+2026-08-25 22:15:17,171 - routes - INFO - Payment processed and order ORD2443 sent to ESP32
+2026-08-25 22:15:17,171 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:17] "POST /api/payment/process HTTP/1.1" 200 -
+2026-08-25 22:15:17,184 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:17] "GET /api/order/ORD2443 HTTP/1.1" 200 -
+2026-08-25 22:15:17,200 - werkzeug - INFO - 10.48.187.50 - - [25/Aug/2026 22:15:17] "POST /dispense HTTP/1.1" 200 -
+2026-08-25 22:15:36,196 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:15:36] "POST /api/order/ORD2443/complete HTTP/1.1" 200 -
+2026-08-25 22:15:36,619 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:15:36] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-25 22:16:06,712 - werkzeug - INFO - 10.48.187.58 - - [25/Aug/2026 22:16:06] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-08-26 11:10:46,922 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-26 11:10:46,927 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-26 11:10:47,005 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.48.187.50:5050
+2026-08-26 11:10:47,005 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-08-26 11:10:47,009 - werkzeug - INFO -  * Restarting with stat
+2026-08-26 11:10:48,558 - esp32_client - INFO - ESP32 communication service initialized
+2026-08-26 11:10:48,558 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-08-26 11:10:48,576 - werkzeug - WARNING -  * Debugger is active!
+2026-08-26 11:10:48,593 - werkzeug - INFO -  * Debugger PIN: 892-467-357
+2026-08-26 11:11:41,944 - werkzeug - INFO - 10.48.187.50 - - [26/Aug/2026 11:11:41] "GET / HTTP/1.1" 200 -
+2026-08-26 11:11:42,780 - werkzeug - INFO - 10.48.187.50 - - [26/Aug/2026 11:11:42] "GET /api/fish HTTP/1.1" 200 -
+2026-08-26 11:11:42,796 - werkzeug - INFO - 10.48.187.50 - - [26/Aug/2026 11:11:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-08-26 11:11:42,796 - werkzeug - INFO - 10.48.187.50 - - [26/Aug/2026 11:11:42] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:32:18,831 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:32:18,831 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:32:18,911 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://127.0.0.1:5050
+2026-09-10 15:32:18,911 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:32:18,911 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:32:20,155 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:32:20,155 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:32:20,188 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:32:20,221 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:34:35,040 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:34:35,040 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:34:35,083 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://127.0.0.1:5050
+2026-09-10 15:34:35,083 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:34:35,086 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:34:36,252 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:34:36,252 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:34:36,292 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:34:36,292 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:34:53,453 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:34:53] "GET / HTTP/1.1" 200 -
+2026-09-10 15:34:53,496 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:34:53] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:34:53,504 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:34:53] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:34:53,663 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:34:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-10 15:35:56,454 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:35:56,454 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:35:56,501 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://127.0.0.1:5050
+2026-09-10 15:35:56,501 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:35:56,504 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:35:57,687 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:35:57,687 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:35:57,720 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:35:57,728 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:36:11,933 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:11] "GET / HTTP/1.1" 200 -
+2026-09-10 15:36:12,010 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:12] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:36:12,018 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:12] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:36:12,151 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-10 15:36:14,784 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:14] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 15:36:22,079 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:22] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 15:36:24,825 - routes - INFO - Sending dispense request to ESP32 for order ORD9513
+2026-09-10 15:36:24,825 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9513', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 15:36:24,826 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:36:24,847 - esp32_client - ERROR - Cannot connect to ESP32 on attempt 1/3
+2026-09-10 15:36:24,847 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:36:29,848 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:36:29,872 - esp32_client - ERROR - Cannot connect to ESP32 on attempt 2/3
+2026-09-10 15:36:29,872 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:36:34,874 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:36:34,874 - esp32_client - ERROR - Cannot connect to ESP32 on attempt 3/3
+2026-09-10 15:36:34,898 - routes - ERROR - ESP32 dispense failed for order ORD9513: Machine did not respond (CONNECTION_ERROR)
+2026-09-10 15:36:34,904 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:36:34] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 15:39:10,874 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:39:10,874 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:39:10,931 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://127.0.0.1:5050
+2026-09-10 15:39:10,931 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:39:10,936 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:39:12,398 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:39:12,400 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:39:12,459 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:39:12,468 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:39:56,531 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:39:56,531 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:39:56,587 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://127.0.0.1:5050
+2026-09-10 15:39:56,587 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:39:56,591 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:39:57,829 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:39:57,829 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:39:57,855 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:39:57,859 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:40:05,484 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:05] "GET / HTTP/1.1" 200 -
+2026-09-10 15:40:05,541 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:05] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:05,546 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:05] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,094 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET / HTTP/1.1" 200 -
+2026-09-10 15:40:06,143 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,157 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,595 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET / HTTP/1.1" 200 -
+2026-09-10 15:40:06,649 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,655 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,921 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET / HTTP/1.1" 200 -
+2026-09-10 15:40:06,973 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:40:06,985 - werkzeug - INFO - 127.0.0.1 - - [10/Sep/2026 15:40:06] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:43:29,459 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:43:29,459 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:43:29,521 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 15:43:29,523 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 15:43:29,527 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 15:43:31,344 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 15:43:31,344 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 15:43:31,375 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 15:43:31,386 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 15:44:32,094 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:44:32] "GET / HTTP/1.1" 200 -
+2026-09-10 15:44:42,546 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:44:42] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:44:42,553 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:44:42] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:44:42,573 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:44:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-10 15:44:56,038 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:44:56] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 15:45:03,341 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:45:03] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 15:45:05,055 - routes - INFO - Sending dispense request to ESP32 for order ORD9381
+2026-09-10 15:45:05,055 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9381', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 15:45:05,055 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:45:26,091 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 15:45:26,091 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:45:31,093 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:45:52,141 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 15:45:52,141 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:45:57,143 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:46:18,187 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 15:46:18,215 - routes - ERROR - ESP32 dispense failed for order ORD9381: Machine did not respond (TIMEOUT)
+2026-09-10 15:46:18,215 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:46:18] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 15:46:43,185 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:46:43] "[31m[1mPOST /api/payment/process HTTP/1.1[0m" 400 -
+2026-09-10 15:46:50,000 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:46:50] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:46:52,125 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:46:52] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-10 15:46:56,162 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:46:56] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 15:46:57,818 - routes - INFO - Sending dispense request to ESP32 for order ORD4502
+2026-09-10 15:46:57,818 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4502', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-09-10 15:46:57,818 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:47:18,858 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 15:47:18,859 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:47:23,859 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:47:44,904 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 15:47:44,904 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:47:49,906 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:48:10,952 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 15:48:10,978 - routes - ERROR - ESP32 dispense failed for order ORD4502: Machine did not respond (TIMEOUT)
+2026-09-10 15:48:10,980 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:48:10] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 15:53:55,426 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:53:55] "[31m[1mPOST /api/payment/process HTTP/1.1[0m" 400 -
+2026-09-10 15:54:00,660 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:54:00] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 15:54:02,887 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:54:02] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-10 15:54:06,312 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 15:54:06] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 15:54:08,282 - routes - INFO - Sending dispense request to ESP32 for order ORD4792
+2026-09-10 15:54:08,284 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4792', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-09-10 15:54:08,284 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 15:54:29,366 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 15:54:29,366 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 15:54:34,368 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:00:14,978 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:00:14,978 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:00:15,027 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:00:15,027 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:00:15,027 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:00:16,964 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:00:16,964 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:00:17,000 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:00:17,012 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:00:26,553 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:00:26] "GET / HTTP/1.1" 200 -
+2026-09-10 16:00:26,786 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:00:26] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:00:26,798 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:00:26] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:00:27,525 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:00:27] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:00:29,591 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:00:29] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:00:36,000 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:00:36] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:00:37,615 - routes - INFO - Sending dispense request to ESP32 for order ORD9790
+2026-09-10 16:00:37,615 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9790', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:00:37,615 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:00:57,114 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:00:57] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:00:58,658 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 16:00:58,658 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:01:03,660 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:01:24,729 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 16:01:24,729 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:01:27,025 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:01:27] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:01:29,731 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:01:50,791 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 16:01:50,818 - routes - ERROR - ESP32 dispense failed for order ORD9790: Machine did not respond (TIMEOUT)
+2026-09-10 16:01:50,820 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:01:50] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:02:26,605 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:02:26] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:05:24,078 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:05:24] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:06:24,241 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:24] "GET / HTTP/1.1" 200 -
+2026-09-10 16:06:26,335 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:06:26] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:06:27,069 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:27] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:06:28,041 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:28] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-10 16:06:28,052 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:28] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-10 16:06:28,052 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:28] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-10 16:06:40,192 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:06:42,812 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:42] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:06:47,216 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:06:47] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:06:49,584 - routes - INFO - Sending dispense request to ESP32 for order ORD9018
+2026-09-10 16:06:49,584 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9018', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:06:49,584 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:07:10,630 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 16:07:10,630 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:07:15,632 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:07:23,698 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:23] "GET / HTTP/1.1" 200 -
+2026-09-10 16:07:25,165 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:25] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:07:25,170 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:25] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:07:27,318 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:27] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:07:30,875 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:30] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:07:32,632 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:32] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:07:33,982 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:33] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:07:36,245 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:36] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-10 16:07:36,662 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 16:07:36,662 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:07:41,664 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:07:42,566 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:07:42] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:07:44,183 - routes - INFO - Sending dispense request to ESP32 for order ORD4048
+2026-09-10 16:07:44,183 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4048', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 4}
+2026-09-10 16:07:44,183 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:08:02,698 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 16:08:02,715 - routes - ERROR - ESP32 dispense failed for order ORD9018: Machine did not respond (TIMEOUT)
+2026-09-10 16:08:02,715 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:08:02] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:08:05,216 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 16:08:05,216 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:08:10,218 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:08:10,899 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:08:10] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:08:29,413 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:08:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:08:31,264 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 16:08:31,266 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:08:36,266 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:08:57,309 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 16:08:57,333 - routes - ERROR - ESP32 dispense failed for order ORD4048: Machine did not respond (TIMEOUT)
+2026-09-10 16:08:57,337 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:08:57] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:09:16,265 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:09:16,265 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:09:16,296 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:09:16,296 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:09:16,296 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:09:18,079 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:09:18,079 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:09:18,097 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:09:18,114 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:09:26,666 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:09:26] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:10:01,265 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:01] "GET / HTTP/1.1" 200 -
+2026-09-10 16:10:01,343 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:01] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:10:01,352 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:01] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:10:03,868 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:03] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:10:09,712 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:09] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:10:11,384 - routes - INFO - Sending dispense request to ESP32 for order ORD7519
+2026-09-10 16:10:11,384 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD7519', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:10:11,384 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:10:15,713 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:15] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-10 16:10:15,713 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:15] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-10 16:10:15,729 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:15] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-10 16:10:30,395 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:30] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:10:31,788 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:31] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:10:32,440 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 16:10:32,440 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:10:35,146 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:10:35] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:10:37,443 - esp32_client - INFO - ESP32 request attempt 2/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:10:58,490 - esp32_client - ERROR - ESP32 request timeout on attempt 2/3
+2026-09-10 16:10:58,490 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:11:03,493 - esp32_client - INFO - ESP32 request attempt 3/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:11:24,538 - esp32_client - ERROR - ESP32 request timeout on attempt 3/3
+2026-09-10 16:11:24,563 - routes - ERROR - ESP32 dispense failed for order ORD7519: Machine did not respond (TIMEOUT)
+2026-09-10 16:11:24,566 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:11:24] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:11:53,744 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:11:53] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:13:32,539 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:13:32] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:13:59,035 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:13:59,035 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:13:59,073 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:13:59,075 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:13:59,075 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:14:01,273 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:14:01,273 - __main__ - INFO - ESP32 configured at 10.48.187.58:80
+2026-09-10 16:14:01,306 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:14:01,309 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:14:02,224 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:14:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:14:11,208 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:14:11] "GET / HTTP/1.1" 200 -
+2026-09-10 16:14:11,274 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:14:11] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:14:11,291 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:14:11] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:14:13,692 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:14:13] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:14:18,998 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:14:18] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:14:20,624 - routes - INFO - Sending dispense request to ESP32 for order ORD2155
+2026-09-10 16:14:20,625 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD2155', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:14:20,625 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.48.187.58:80/dispense
+2026-09-10 16:14:41,659 - esp32_client - ERROR - ESP32 request timeout on attempt 1/3
+2026-09-10 16:14:41,659 - esp32_client - INFO - Retrying in 5s...
+2026-09-10 16:15:00,705 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:15:00,705 - __main__ - INFO - ESP32 configured at 10.202.85.58#10.48.187.58:80
+2026-09-10 16:15:00,749 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:15:00,749 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:15:00,753 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:15:02,222 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:15:02,222 - __main__ - INFO - ESP32 configured at 10.202.85.58#10.48.187.58:80
+2026-09-10 16:15:02,256 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:15:02,256 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:15:02,374 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:15:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:15:11,777 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:11] "GET / HTTP/1.1" 200 -
+2026-09-10 16:15:11,850 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:11] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:15:11,863 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:11] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:15:15,389 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:15] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:15:21,072 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:21] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:15:22,523 - routes - INFO - Sending dispense request to ESP32 for order ORD7329
+2026-09-10 16:15:22,523 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD7329', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:15:22,523 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58#10.48.187.58:80/dispense
+2026-09-10 16:15:22,707 - esp32_client - INFO - ESP32 response status: 404
+2026-09-10 16:15:22,707 - esp32_client - ERROR - ESP32 returned HTTP 404
+2026-09-10 16:15:22,739 - routes - ERROR - ESP32 dispense failed for order ORD7329: Machine returned error code 404
+2026-09-10 16:15:22,739 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:22] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:15:26,438 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:15:26] "[31m[1mPOST /api/payment/process HTTP/1.1[0m" 400 -
+2026-09-10 16:15:32,163 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:15:32] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:26:36,247 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:26:36,249 - __main__ - INFO - ESP32 configured at 10.202.85.58#10.48.187.58:80
+2026-09-10 16:26:36,352 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:26:36,352 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:26:36,365 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:26:39,727 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:26:39,727 - __main__ - INFO - ESP32 configured at 10.202.85.58#10.48.187.58:80
+2026-09-10 16:26:39,785 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:26:39,808 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:26:58,891 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:26:58] "GET / HTTP/1.1" 200 -
+2026-09-10 16:26:58,972 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:26:58] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:26:58,995 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:26:58] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:27:01,891 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:27:01] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:27:10,484 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:27:10] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:27:12,025 - routes - INFO - Sending dispense request to ESP32 for order ORD9581
+2026-09-10 16:27:12,027 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9581', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:27:12,029 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58#10.48.187.58:80/dispense
+2026-09-10 16:27:12,111 - esp32_client - INFO - ESP32 response status: 404
+2026-09-10 16:27:12,111 - esp32_client - ERROR - ESP32 returned HTTP 404
+2026-09-10 16:27:12,138 - routes - ERROR - ESP32 dispense failed for order ORD9581: Machine returned error code 404
+2026-09-10 16:27:12,139 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:27:12] "[35m[1mPOST /api/payment/process HTTP/1.1[0m" 503 -
+2026-09-10 16:27:16,827 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:27:16] "[31m[1mPOST /api/payment/process HTTP/1.1[0m" 400 -
+2026-09-10 16:27:33,042 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:27:33] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:28:03,362 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:28:03] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:29:02,908 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:29:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:30:05,062 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:30:05] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:30:33,451 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:30:33] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:31:02,913 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:31:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:36:20,283 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:36:20,289 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-10 16:36:20,432 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-10 16:36:20,432 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-10 16:36:20,443 - werkzeug - INFO -  * Restarting with stat
+2026-09-10 16:36:24,264 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-10 16:36:24,264 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-10 16:36:24,304 - werkzeug - WARNING -  * Debugger is active!
+2026-09-10 16:36:24,320 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-10 16:36:24,494 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:24] "GET / HTTP/1.1" 200 -
+2026-09-10 16:36:24,624 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:24] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:36:24,637 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:24] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:36:34,534 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:34] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:36:39,629 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:36:39] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:36:40,083 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:40] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:36:41,667 - routes - INFO - Sending dispense request to ESP32 for order ORD0408
+2026-09-10 16:36:41,671 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD0408', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:36:41,675 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:36:41,940 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:36:41,942 - esp32_client - INFO - Dispense request successful for order ORD0408
+2026-09-10 16:36:41,957 - routes - INFO - Payment processed and order ORD0408 sent to ESP32
+2026-09-10 16:36:41,964 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:41] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:36:42,005 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:42] "GET /api/order/ORD0408 HTTP/1.1" 200 -
+2026-09-10 16:36:42,043 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:36:42] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:37:03,579 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:37:03] "POST /api/order/ORD0408/complete HTTP/1.1" 200 -
+2026-09-10 16:37:33,090 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:33] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:37:34,359 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:34] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:37:35,767 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:35] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:37:41,257 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:41] "GET /api/fish/2 HTTP/1.1" 200 -
+2026-09-10 16:37:44,756 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:44] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-10 16:37:47,062 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:47] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-09-10 16:37:49,965 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:49] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:37:51,440 - routes - INFO - Sending dispense request to ESP32 for order ORD2462
+2026-09-10 16:37:51,440 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD2462', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:37:51,440 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:37:54,745 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:37:54,745 - esp32_client - INFO - Dispense request successful for order ORD2462
+2026-09-10 16:37:54,800 - routes - INFO - Payment processed and order ORD2462 sent to ESP32
+2026-09-10 16:37:54,801 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:37:54] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:38:19,815 - routes - INFO - Sending dispense request to ESP32 for order ORD7874
+2026-09-10 16:38:19,815 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD7874', 'compartment': 2, 'fishName': 'Salmon', 'qty': 1}
+2026-09-10 16:38:19,815 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:38:19,980 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:38:19,982 - esp32_client - INFO - Dispense request successful for order ORD7874
+2026-09-10 16:38:20,027 - routes - INFO - Payment processed and order ORD7874 sent to ESP32
+2026-09-10 16:38:20,032 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:38:20] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:38:45,048 - routes - INFO - Sending dispense request to ESP32 for order ORD9677
+2026-09-10 16:38:45,052 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD9677', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-09-10 16:38:45,056 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:38:45,170 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:38:45,171 - esp32_client - INFO - Dispense request successful for order ORD9677
+2026-09-10 16:38:45,211 - routes - INFO - Payment processed and order ORD9677 sent to ESP32
+2026-09-10 16:38:45,213 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:38:45] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:38:59,961 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:38:59] "POST /api/order/ORD7874/complete HTTP/1.1" 200 -
+2026-09-10 16:39:04,095 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:39:04] "POST /api/order/ORD9677/complete HTTP/1.1" 200 -
+2026-09-10 16:39:04,421 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:39:04] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:39:10,234 - routes - INFO - Sending dispense request to ESP32 for order ORD4989
+2026-09-10 16:39:10,236 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD4989', 'compartment': 4, 'fishName': 'Catfish', 'qty': 1}
+2026-09-10 16:39:10,236 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:39:13,136 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:39:13,136 - esp32_client - INFO - Dispense request successful for order ORD4989
+2026-09-10 16:39:13,163 - routes - INFO - Payment processed and order ORD4989 sent to ESP32
+2026-09-10 16:39:13,165 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:39:13] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:39:13,200 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:39:13] "GET /api/order/ORD2462 HTTP/1.1" 200 -
+2026-09-10 16:39:13,247 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:39:13] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:39:38,284 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:39:38] "GET /api/order/ORD7874 HTTP/1.1" 200 -
+2026-09-10 16:39:38,334 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:39:38] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:39:38,837 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:39:38] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:40:03,349 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:40:03] "GET /api/order/ORD9677 HTTP/1.1" 200 -
+2026-09-10 16:40:03,413 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:40:03] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:40:28,429 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:40:28] "GET /api/order/ORD4989 HTTP/1.1" 200 -
+2026-09-10 16:40:28,468 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:40:28] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:40:34,518 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:40:34] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:40:44,630 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:40:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:41:14,833 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:14] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:41:26,556 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:26] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:41:28,442 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:28] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:41:29,723 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:29] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-10 16:41:29,725 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:29] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-10 16:41:29,781 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:29] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-10 16:41:34,663 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:41:34] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:41:42,894 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:42] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:41:49,014 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:49] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:41:52,614 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:52] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:41:56,615 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:41:56] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-10 16:42:04,926 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:04] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-10 16:42:07,956 - routes - INFO - Sending dispense request to ESP32 for order ORD3669
+2026-09-10 16:42:07,966 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD3669', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-10 16:42:07,974 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-10 16:42:08,136 - esp32_client - INFO - ESP32 response status: 200
+2026-09-10 16:42:08,136 - esp32_client - INFO - Dispense request successful for order ORD3669
+2026-09-10 16:42:08,229 - routes - INFO - Payment processed and order ORD3669 sent to ESP32
+2026-09-10 16:42:08,249 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:08] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-10 16:42:08,284 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:08] "GET /api/order/ORD3669 HTTP/1.1" 200 -
+2026-09-10 16:42:08,307 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:08] "POST /dispense HTTP/1.1" 200 -
+2026-09-10 16:42:34,373 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:42:34] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:42:43,804 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:43] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:42:47,294 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:47] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:42:50,365 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:50] "GET /api/orders HTTP/1.1" 200 -
+2026-09-10 16:42:55,247 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:42:55] "GET /api/order/ORD3669 HTTP/1.1" 200 -
+2026-09-10 16:43:00,340 - werkzeug - INFO - 10.202.85.50 - - [10/Sep/2026 16:43:00] "GET /api/fish HTTP/1.1" 200 -
+2026-09-10 16:43:04,671 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:43:04] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:44:37,226 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:44:37] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-10 16:45:37,200 - werkzeug - INFO - 10.202.85.58 - - [10/Sep/2026 16:45:37] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:32:49,924 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-12 13:32:49,942 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-12 13:32:50,025 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-12 13:32:50,027 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-12 13:32:50,027 - werkzeug - INFO -  * Restarting with stat
+2026-09-12 13:32:52,394 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-12 13:32:52,394 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-12 13:32:52,428 - werkzeug - WARNING -  * Debugger is active!
+2026-09-12 13:32:52,444 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-12 13:32:52,804 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:32:52] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:33:22,747 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:33:22] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:33:25,690 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:33:25] "GET / HTTP/1.1" 200 -
+2026-09-12 13:33:52,000 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:33:52] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:33:52,009 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:33:52] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:33:52,028 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:33:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-09-12 13:33:52,893 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:33:52] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:34:05,709 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:05] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-12 13:34:11,813 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:11] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 13:34:13,779 - routes - INFO - Sending dispense request to ESP32 for order ORD5248
+2026-09-12 13:34:13,779 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD5248', 'compartment': 1, 'fishName': 'Tilapia', 'qty': 1}
+2026-09-12 13:34:13,781 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 13:34:15,096 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 13:34:15,096 - esp32_client - INFO - Dispense request successful for order ORD5248
+2026-09-12 13:34:15,104 - routes - INFO - Payment processed and order ORD5248 sent to ESP32
+2026-09-12 13:34:15,104 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:15] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 13:34:15,114 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:15] "GET /api/order/ORD5248 HTTP/1.1" 200 -
+2026-09-12 13:34:15,128 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:15] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 13:34:34,774 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:34:34] "POST /api/order/ORD5248/complete HTTP/1.1" 200 -
+2026-09-12 13:34:35,501 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:34:35] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:34:59,786 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:34:59] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:35:02,462 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:02] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:35:05,916 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:35:05] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:35:06,091 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:06] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 13:35:08,763 - routes - INFO - Sending dispense request to ESP32 for order ORD0047
+2026-09-12 13:35:08,763 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD0047', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-09-12 13:35:08,763 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 13:35:09,367 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 13:35:09,372 - esp32_client - INFO - Dispense request successful for order ORD0047
+2026-09-12 13:35:09,396 - routes - INFO - Payment processed and order ORD0047 sent to ESP32
+2026-09-12 13:35:09,396 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:09] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 13:35:09,400 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:09] "GET /api/order/ORD0047 HTTP/1.1" 200 -
+2026-09-12 13:35:09,416 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:09] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 13:35:43,562 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:35:43] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:35:47,724 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:35:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:36:02,594 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:36:02] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:36:05,504 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:36:05] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 13:36:07,932 - routes - INFO - Sending dispense request to ESP32 for order ORD1709
+2026-09-12 13:36:07,932 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD1709', 'compartment': 3, 'fishName': 'Trout', 'qty': 1}
+2026-09-12 13:36:07,932 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 13:36:17,524 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 13:36:17,524 - esp32_client - INFO - Dispense request successful for order ORD1709
+2026-09-12 13:36:17,548 - routes - INFO - Payment processed and order ORD1709 sent to ESP32
+2026-09-12 13:36:17,548 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:36:17] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 13:36:17,562 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:36:17] "GET /api/order/ORD1709 HTTP/1.1" 200 -
+2026-09-12 13:36:17,576 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:36:17] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 13:36:27,949 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:36:27] "POST /api/order/ORD1709/complete HTTP/1.1" 200 -
+2026-09-12 13:36:28,634 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:36:28] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:38:12,370 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:38:12] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:38:29,268 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:38:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:38:58,824 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:38:58] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:38:58,826 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:38:58] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:38:58,842 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:38:58] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:38:59,068 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:38:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:39:29,292 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:39:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:39:38,242 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:38] "PUT /api/fish/1 HTTP/1.1" 200 -
+2026-09-12 13:39:40,372 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:39:40,398 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:40] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:39:40,401 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:40] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:39:40,403 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:40] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:39:40,407 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:39:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:39:59,368 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:39:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:40:29,550 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:40:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:40:42,061 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:42] "PUT /api/fish/2 HTTP/1.1" 200 -
+2026-09-12 13:40:46,626 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:46] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:40:46,655 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:46] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:40:46,659 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:46] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:40:46,662 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:46] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:40:46,673 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:40:46] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:41:00,212 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:41:00] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:41:09,156 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:09] "PUT /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:41:12,426 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:12] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:41:12,443 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:12] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:41:12,450 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:12] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:41:12,450 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:12] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:41:12,454 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:12] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:41:24,947 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:24] "PUT /api/fish/4 HTTP/1.1" 200 -
+2026-09-12 13:41:27,841 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:27] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:41:27,867 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:27] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:41:27,871 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:27] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:41:27,875 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:27] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:41:27,882 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:27] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:41:31,035 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:41:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:41:35,754 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:41:35] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:41:58,559 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:41:58] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:42:30,391 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:42:30] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:42:43,006 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:43] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:42:43,015 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:43] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:42:43,015 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:43] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:42:51,995 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:51] "PUT /api/fish/1 HTTP/1.1" 200 -
+2026-09-12 13:42:53,648 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:53] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:42:53,664 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:53] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:42:53,670 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:53] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:42:53,670 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:53] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:42:53,675 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:53] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:42:58,440 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:42:58] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:42:59,222 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:42:59] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:43:29,296 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:43:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:43:32,563 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:32] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:43:32,568 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:32] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:43:32,581 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:32] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:43:47,124 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:47] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:43:47,137 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:47] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:43:47,140 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:47] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:43:48,752 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:48] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:43:48,760 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:48] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:43:48,761 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:43:48] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:44:00,470 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:00] "PUT /api/fish/2 HTTP/1.1" 200 -
+2026-09-12 13:44:02,401 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:02] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:44:02,416 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:02] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:44:02,417 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:02] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:44:02,423 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:02] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:44:02,425 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:02] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:44:28,770 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:44:28] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:44:38,596 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:38] "PUT /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:44:40,778 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:44:40,797 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:40] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:44:40,809 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:44:40,817 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:40] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:44:40,822 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:44:40] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:44:59,261 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:44:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:45:14,471 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:14] "PUT /api/fish/4 HTTP/1.1" 200 -
+2026-09-12 13:45:16,204 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:16] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:45:16,221 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:16] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:45:16,224 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:16] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:45:16,233 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:16] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:45:16,234 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:16] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:45:22,685 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:22] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:45:28,685 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:45:28] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:45:36,720 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:36] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:45:38,398 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:38] "GET /api/orders HTTP/1.1" 200 -
+2026-09-12 13:45:41,100 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:41] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:45:41,100 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:41] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:45:41,111 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:45:41] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:45:58,978 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:45:58] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:46:28,713 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:46:28] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:46:59,518 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:46:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:47:19,548 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:19] "GET /api/orders HTTP/1.1" 200 -
+2026-09-12 13:47:29,221 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:47:29] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:47:31,645 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:31] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:47:31,653 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:31] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:47:31,660 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:31] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:47:36,810 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:36] "GET /api/orders HTTP/1.1" 200 -
+2026-09-12 13:47:37,738 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:37] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:47:38,692 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:38] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:47:39,716 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:39] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:47:41,142 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:41] "GET /api/orders HTTP/1.1" 200 -
+2026-09-12 13:47:42,430 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:42] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:47:59,183 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:47:59] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:48:00,765 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:48:00] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:48:21,242 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:48:21] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 13:48:26,042 - routes - INFO - Sending dispense request to ESP32 for order ORD2067
+2026-09-12 13:48:26,042 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD2067', 'compartment': 3, 'fishName': 'sondale', 'qty': 1}
+2026-09-12 13:48:26,042 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 13:48:26,718 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 13:48:26,718 - esp32_client - INFO - Dispense request successful for order ORD2067
+2026-09-12 13:48:26,741 - routes - INFO - Payment processed and order ORD2067 sent to ESP32
+2026-09-12 13:48:26,741 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:48:26] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 13:48:26,767 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:48:26] "GET /api/order/ORD2067 HTTP/1.1" 200 -
+2026-09-12 13:48:26,784 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:48:26] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 13:48:49,082 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:48:49] "POST /api/order/ORD2067/complete HTTP/1.1" 200 -
+2026-09-12 13:48:50,390 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:48:50] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:48:56,318 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:48:56] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:49:05,707 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:49:05] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 13:49:09,362 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:49:09] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 13:49:11,279 - routes - INFO - Sending dispense request to ESP32 for order ORD2357
+2026-09-12 13:49:11,279 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD2357', 'compartment': 3, 'fishName': 'sondale', 'qty': 1}
+2026-09-12 13:49:11,279 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 13:49:11,593 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 13:49:11,594 - esp32_client - INFO - Dispense request successful for order ORD2357
+2026-09-12 13:49:11,604 - routes - INFO - Payment processed and order ORD2357 sent to ESP32
+2026-09-12 13:49:11,604 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:49:11] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 13:49:11,622 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:49:11] "GET /api/order/ORD2357 HTTP/1.1" 200 -
+2026-09-12 13:49:11,633 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:49:11] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 13:49:30,654 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:49:30] "POST /api/order/ORD2357/complete HTTP/1.1" 200 -
+2026-09-12 13:49:31,672 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:49:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:50:01,683 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:50:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:50:03,655 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:50:03] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:50:31,700 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:50:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:51:02,192 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:51:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:51:31,497 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:51:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:52:01,502 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:52:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:52:32,611 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:52:32] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:52:43,844 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:43] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:52:43,852 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:43] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:52:43,852 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:43] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:52:54,122 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:54] "PUT /api/fish/4 HTTP/1.1" 200 -
+2026-09-12 13:52:56,173 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:56] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:52:56,190 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:56] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:52:56,198 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:56] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 13:52:56,201 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:56] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 13:52:56,207 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:56] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 13:52:59,176 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 13:52:59] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 13:53:01,705 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:53:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:53:31,998 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:53:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:54:01,310 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:54:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:55:01,708 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:55:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:56:01,716 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:56:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:56:31,494 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:56:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:57:01,732 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:57:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:57:32,333 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:57:32] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:58:01,830 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:58:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:58:31,849 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:58:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:59:02,758 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:59:02] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 13:59:31,754 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 13:59:31] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:00:01,958 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:00:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:00:32,589 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:00:32] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:01:01,352 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:01:01] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:01:33,817 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:01:33] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:48:36,581 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-12 14:48:36,583 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-12 14:48:36,677 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.202.85.50:5050
+2026-09-12 14:48:36,677 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-09-12 14:48:36,689 - werkzeug - INFO -  * Restarting with stat
+2026-09-12 14:48:39,824 - esp32_client - INFO - ESP32 communication service initialized
+2026-09-12 14:48:39,827 - __main__ - INFO - ESP32 configured at 10.202.85.58:80
+2026-09-12 14:48:40,036 - werkzeug - WARNING -  * Debugger is active!
+2026-09-12 14:48:40,047 - werkzeug - INFO -  * Debugger PIN: 127-297-825
+2026-09-12 14:48:40,232 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:40] "GET / HTTP/1.1" 200 -
+2026-09-12 14:48:40,405 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:48:40,409 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:40] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:48:44,402 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:48:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:48:50,307 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:50] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:48:50,309 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:50] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:48:50,319 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:50] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:48:56,853 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:48:56] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:49:14,447 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:49:14] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:49:47,477 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:49:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:49:57,874 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:49:57] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:49:59,266 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:49:59] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:49:59,268 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:49:59] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:49:59,268 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:49:59] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:06,680 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:06] "DELETE /api/fish/5 HTTP/1.1" 200 -
+2026-09-12 14:50:08,457 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:08] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:08,475 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:08] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:50:08,475 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:08] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:08,484 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:08] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:50:08,487 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:08] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:12,788 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:12] "DELETE /api/fish/7 HTTP/1.1" 200 -
+2026-09-12 14:50:14,456 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:14] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:14,475 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:14] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:14,481 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:14] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:50:14,484 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:14] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:50:14,484 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:14] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:17,778 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:17] "DELETE /api/fish/8 HTTP/1.1" 200 -
+2026-09-12 14:50:19,610 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:19] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:19,630 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:19] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:19,637 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:19] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:50:19,637 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:19] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:50:19,645 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:19] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:20,339 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:20] "PUT /api/fish/1 HTTP/1.1" 200 -
+2026-09-12 14:50:25,447 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:25] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:25,466 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:25] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:25,470 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:25] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:50:25,477 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:25] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:50:25,482 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:25] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:29,217 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:29] "DELETE /api/fish/6 HTTP/1.1" 200 -
+2026-09-12 14:50:30,934 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:30] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:30,941 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:30] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:50:30,951 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:30] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:50:30,951 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:30] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:30,951 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:30] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:50:33,230 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:50:33] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 14:50:44,624 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:50:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:51:14,294 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:51:14] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:51:47,238 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:51:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:52:14,511 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:52:14] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:52:47,461 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:52:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:53:44,420 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:53:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:54:26,642 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:54:26] "GET /api/dashboard/stats HTTP/1.1" 200 -
+2026-09-12 14:54:26,645 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:54:26] "GET /api/dashboard/revenue HTTP/1.1" 200 -
+2026-09-12 14:54:26,648 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 14:54:26] "GET /api/dashboard/fish-stats HTTP/1.1" 200 -
+2026-09-12 14:54:47,031 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:54:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:55:44,844 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:55:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:56:16,795 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:56:16] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:56:44,404 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:56:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 14:57:49,323 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 14:57:49] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:11:23,685 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:11:23] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 15:11:47,920 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:11:47] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:12:14,617 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:12:14] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:12:16,801 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:16] "GET /api/fish/1 HTTP/1.1" 200 -
+2026-09-12 15:12:22,642 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:22] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 15:12:24,102 - routes - INFO - Sending dispense request to ESP32 for order ORD6508
+2026-09-12 15:12:24,102 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD6508', 'compartment': 1, 'fishName': 'bangade', 'qty': 1}
+2026-09-12 15:12:24,102 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 15:12:24,925 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 15:12:24,925 - esp32_client - INFO - Dispense request successful for order ORD6508
+2026-09-12 15:12:24,951 - routes - INFO - Payment processed and order ORD6508 sent to ESP32
+2026-09-12 15:12:24,953 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:24] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 15:12:24,960 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:24] "GET /api/order/ORD6508 HTTP/1.1" 200 -
+2026-09-12 15:12:24,972 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:24] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 15:12:39,929 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:39] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 15:12:41,807 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:41] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 15:12:43,916 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:12:43] "POST /api/order/ORD6508/complete HTTP/1.1" 200 -
+2026-09-12 15:12:44,718 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:12:44] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:12:45,074 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:45] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 15:12:52,650 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:52] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 15:12:54,631 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:54] "GET /api/fish/3 HTTP/1.1" 200 -
+2026-09-12 15:12:57,524 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:57] "[35m[1mPOST /api/checkout HTTP/1.1[0m" 201 -
+2026-09-12 15:12:59,733 - routes - INFO - Sending dispense request to ESP32 for order ORD3508
+2026-09-12 15:12:59,733 - esp32_client - INFO - Sending dispense request to ESP32: {'orderId': 'ORD3508', 'compartment': 3, 'fishName': 'sondale', 'qty': 1}
+2026-09-12 15:12:59,733 - esp32_client - INFO - ESP32 request attempt 1/3 to http://10.202.85.58:80/dispense
+2026-09-12 15:12:59,875 - esp32_client - INFO - ESP32 response status: 200
+2026-09-12 15:12:59,875 - esp32_client - INFO - Dispense request successful for order ORD3508
+2026-09-12 15:12:59,905 - routes - INFO - Payment processed and order ORD3508 sent to ESP32
+2026-09-12 15:12:59,905 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:59] "POST /api/payment/process HTTP/1.1" 200 -
+2026-09-12 15:12:59,911 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:59] "GET /api/order/ORD3508 HTTP/1.1" 200 -
+2026-09-12 15:12:59,926 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:12:59] "POST /dispense HTTP/1.1" 200 -
+2026-09-12 15:13:18,949 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:13:18] "POST /api/order/ORD3508/complete HTTP/1.1" 200 -
+2026-09-12 15:13:23,657 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:13:23] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:13:34,293 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:13:34] "GET /api/fish HTTP/1.1" 200 -
+2026-09-12 15:13:47,686 - werkzeug - INFO - 10.202.85.50 - - [12/Sep/2026 15:13:47] "GET /api/fish/4 HTTP/1.1" 200 -
+2026-09-12 15:13:59,494 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:13:59] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:14:19,921 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:14:19] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:14:52,125 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:14:52] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
+2026-09-12 15:15:19,522 - werkzeug - INFO - 10.202.85.58 - - [12/Sep/2026 15:15:19] "POST /api/esp32/sensor-data HTTP/1.1" 200 -
