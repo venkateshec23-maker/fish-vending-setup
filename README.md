@@ -41,7 +41,7 @@ fish_vending_machine/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Abhilash1575/fish-vending-setup.git
+git clone https://github.com/venkateshec23-maker/fish-vending-setup.git
 cd fish-vending-setup
 
 # 2. Run setup (installs everything)
@@ -58,7 +58,7 @@ nano .env
 
 ```powershell
 # 1. Clone the repository
-git clone https://github.com/Abhilash1575/fish-vending-setup.git
+git clone https://github.com/venkateshec23-maker/fish-vending-setup.git
 cd fish-vending-setup
 
 # 2. Create Python virtual environment
